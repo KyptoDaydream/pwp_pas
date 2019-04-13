@@ -10,8 +10,22 @@ collections:
     label: Blog
     folder: blog
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Type", name: "type", widget: "hidden", default: "clanok"}
+      - {label: "Titulok", name: "title", widget: "string"}
+      - {label: "Dátum publikovania", name: "start", widget: "datetime", format: "DD.MM.YYYY HH:mm"}
+      - {label: "Obrázok", name: "thumbnail", widget: "image"}  
+      - {label: "Článok", name: "body", widget: "markdown"}  
+  - name: pozicie
+    label: Pozicie
+    folder: pozicie
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Type", name: "type", widget: "hidden", default: "pozicie"}
+      - {label: "Titulok", name: "title", widget: "string"}
+      - {label: "Volne miesta", name: "title", widget: "string", default: "0"}
+      - {label: "Článok", name: "body", widget: "markdown"}  
