@@ -6,7 +6,7 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-   - name: blog
+  - name: blog
     label: Blog
     folder: blog
     create: true
