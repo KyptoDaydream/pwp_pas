@@ -6,7 +6,7 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
+   - name: blog
     label: Blog
     folder: blog
     create: true
@@ -14,6 +14,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Type", name: "type", widget: "hidden", default: "clanok"}
+      - { name: path, label: Path }
       - {label: "Titulok", name: "title", widget: "string"}
       - {label: "Dátum publikovania", name: "start", widget: "datetime", format: "DD.MM.YYYY"}
       - {label: "Obrázok", name: "thumbnail", widget: "image"}  
@@ -26,6 +27,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Type", name: "type", widget: "hidden", default: "pozicie"}
+      - { name: path, label: Path }
       - {label: "Titulok", name: "title", widget: "string"}
       - {label: "Volne miesta", name: "title", widget: "string", default: "0"}
       - {label: "Článok", name: "body", widget: "markdown"}  

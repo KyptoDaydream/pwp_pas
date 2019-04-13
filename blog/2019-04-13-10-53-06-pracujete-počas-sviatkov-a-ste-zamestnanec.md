@@ -1,6 +1,7 @@
 ---
 layout: blog
 type: clanok
+path: '/ahoj/'
 title: 'Pracujete počas sviatkov a ste zamestnanec? '
 start: 02.04.2019
 thumbnail: /assets/depositphotos_97977528-stock-photo-party-people-in-nightclub.jpg

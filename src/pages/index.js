@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 import Header from "../components/header"
 import Slider from "../components/slider"
@@ -9,8 +10,36 @@ const PageWrapper = styled.div`
   width: 100vw;
 `
 
-export default () => 
-  <PageWrapper>
-    <Header />
-    <Slider />
-  </PageWrapper>
+class Index extends React.Component {
+  render() {
+    const { data } = this.props;
+    console.log(data);
+    return (
+      <PageWrapper>
+        <Header />
+        <Slider />
+      </PageWrapper>
+    )
+  }
+}  
+
+export default Index
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___start] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+            thumbnail
+          }
+        }
+      }
+    }
+  }
+`
