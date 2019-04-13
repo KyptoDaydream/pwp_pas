@@ -72,6 +72,7 @@ const MenuWrapper = styled.div `
   }
   .ahoj {
     display: block;
+    color: black;
   }
 `
 const MenuItem = styled.span`
