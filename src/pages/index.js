@@ -3,6 +3,10 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Header from "../components/header"
 import Slider from "../components/slider"
+import BlogShowcase from "../components/blogshowcase"
+import WorkTable from '../components/workTable';
+import Services from '../components/services'
+import Footer from '../components/footer'
 import "../styles/global.css"
 
 const PageWrapper = styled.div`
@@ -18,6 +22,10 @@ class Index extends React.Component {
       <PageWrapper>
         <Header />
         <Slider />
+        <WorkTable data={data}/>
+        <Services/>
+        <BlogShowcase data={data}/>
+        <Footer />
       </PageWrapper>
     )
   }
@@ -37,6 +45,10 @@ export const pageQuery = graphql`
             path
             title
             thumbnail
+            space
+            city
+            position
+            type
           }
         }
       }

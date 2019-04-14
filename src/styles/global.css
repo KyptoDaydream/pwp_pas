@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900|Poppins:400,700,800,900|Roboto+Condensed:400,700|Roboto:500,700,900&amp;subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900|Poppins:400,700,800,900|Roboto+Condensed:400,700|Roboto:500,700,900&amp;subset=latin-ext');
 
 /*
 font-family: 'Roboto', sans-serif;
@@ -11,7 +11,53 @@ body {
   margin: 0;
   font-family: 'Muli', sans-serif;
   font-size: 14px;
+  color: #54585d;
+}
+* {
+  box-sizing: border-box;
 }
 *:focus {
   outline: none;
+}
+
+h2 {
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+h2.subtitle {
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 400;
+  margin-top: 0px;
+  color: #54585d;
+}
+h2.subtitle:after {
+  content: '';
+  display: block;
+  width: 170px;
+  height: 5px;
+  background: rgba(238,146,12,1); /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(238,146,12,1) 0%, rgba(255,61,23,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(238,146,12,1) 0%,rgba(255,61,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(238,146,12,1) 0%,rgba(255,61,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  margin: 0 auto;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  margin-left: 40px;
+}
+h5 {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  margin-left: 40px;
 }

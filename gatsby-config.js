@@ -12,6 +12,19 @@ module.exports = {
         name: 'docs'
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/pozicie`,
+        name: 'docs'
+      },
+    },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // Add any options here
+      },
+    }
   ],
 }

@@ -4,7 +4,7 @@ type: clanok
 path: '/ahoj/'
 title: 'Pracujete počas sviatkov a ste zamestnanec? '
 start: 02.04.2019
-thumbnail: /assets/4.jpg
+thumbnail: /assets/2.jpg
 ---
 V našej firme spracovávame momentálne mzdy pre vyše 750 zamestnancov a pri takomto počte sa už stretávame s rôznymi situáciami, ktoré môžu počas výkonu ich práce nastať. Keďže sa blížia sviatky, je to aktuálna téma. 
 

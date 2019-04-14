@@ -124,14 +124,14 @@ class Burger extends React.Component {
     return (
       <MenuWrapper>
         <Menu right width={ '100%' }>
-          <span class="ahoj"><Link to="/ahoj"><MenuItem>Pre Firmy</MenuItem></Link></span>
-          <span class="ahoj"><Link to="/ahoj"><MenuItem>Pre Zamestnancov</MenuItem></Link></span>
-          <span class="ahoj"><Link to="/ahoj"><MenuItem>Ponuka Prace</MenuItem></Link></span>
-          <span class="ahoj"><Link to="/ahoj"><MenuItem>Blog</MenuItem></Link></span>
-          <span class="ahoj"><Link to="/ahoj"><MenuItem>Kontakt</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ahoj"><MenuItem>O Nás</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ahoj"><MenuItem>Info Pre Firmy</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ahoj"><MenuItem>Ponuka Práce</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ahoj"><MenuItem>Blog</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ahoj"><MenuItem>Kontakt</MenuItem></Link></span>
           <Kontakt>
             <span>Kontakt</span>
-            <p>moldavska cesta 49</p>
+            <p>moldavska cesta 43/A</p>
             <p>0945 124 953</p>
             <p>info@pas.sk</p>
             <Icon className='facebook' />

@@ -19,7 +19,6 @@ const Button = styled.div`
   span:after {
     content: '';
     background: url(${arrow_white});
-    fill: white;
     display: inline-block;
     background-size: cover;
     margin-left: 15px;

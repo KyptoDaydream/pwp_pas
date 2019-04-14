@@ -28,6 +28,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Type", name: "type", widget: "hidden", default: "pozicie"}
       - { name: path, label: Path }
-      - {label: "Titulok", name: "title", widget: "string"}
-      - {label: "Volne miesta", name: "title", widget: "string", default: "0"}
-      - {label: "Článok", name: "body", widget: "markdown"}  
+      - {label: "Pozicia", name: "position", widget: "string"}
+      - {label: "Mesto", name: "city", widget: "string", default: "0"}
+      - {label: "Volne miesta", name: "space", widget: "string", default: "0"}
+      - {label: "Dátum publikovania", name: "start", widget: "datetime", format: "DD.MM.YYYY"}

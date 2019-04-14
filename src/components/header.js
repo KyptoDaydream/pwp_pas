@@ -8,7 +8,7 @@ const HeaderWrapper = styled.div `
   width: 100%;
   height: 150px;
   background: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 9999
 `
