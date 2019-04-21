@@ -17,7 +17,7 @@ const MenuWrapper = styled.div `
     top: 50px;
   }
   .bm-burger-bars {
-    background: white;
+    background: var(--main-yellow);
     border-radius: 5px;
     transition: 0.4s;
   }
@@ -29,7 +29,7 @@ const MenuWrapper = styled.div `
     height: 50px !important;
   }
   .bm-burger-button:hover .bm-burger-bars {
-    background: black;
+    background: var(--main-pink);
     opacity: 1 !important;
   }
   .bm-cross {
@@ -41,7 +41,7 @@ const MenuWrapper = styled.div `
     transition: 0.3s;
   }
   .bm-cross-button:hover .bm-cross{
-    background: orange;
+    background: var(--main-yellow);
   }
   .bm-item-list {
     width: 600px;
@@ -67,7 +67,7 @@ const MenuWrapper = styled.div `
       color: black;
     }
     a:hover {
-      color: orange;
+      color: var(--main-yellow);
     }
   }
   .ahoj {
@@ -81,7 +81,7 @@ const MenuItem = styled.span`
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: underline;
-  text-decoration-color: orange;
+  text-decoration-color: var(--main-yellow);
 `
 const Kontakt = styled.div`
     position: absolute;
@@ -93,7 +93,7 @@ const Kontakt = styled.div`
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 900;
-    color: orange;
+    color: var(--main-yellow);
     text-transform: uppercase;
   }
 `
@@ -124,15 +124,15 @@ class Burger extends React.Component {
     return (
       <MenuWrapper>
         <Menu right width={ '100%' }>
-          <span className="ahoj"><Link to="/ahoj"><MenuItem>O Nás</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/ahoj"><MenuItem>Info Pre Firmy</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/ahoj"><MenuItem>Ponuka Práce</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/ahoj"><MenuItem>Blog</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/ahoj"><MenuItem>Kontakt</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/o_nas"><MenuItem>O Nás</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/sluzby"><MenuItem>Info Pre Firmy</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ponuka_prace"><MenuItem>Ponuka Práce</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/kontakt"><MenuItem>Kontakt</MenuItem></Link></span>
           <Kontakt>
             <span>Kontakt</span>
             <p>moldavska cesta 43/A</p>
-            <p>0945 124 953</p>
+            <p>0917 237 471</p>
             <p>info@pas.sk</p>
             <Icon className='facebook' />
             <Icon className='mail' />

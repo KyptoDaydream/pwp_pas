@@ -3,20 +3,25 @@ import styled from "styled-components"
 
 const HeadingWrapper = styled.div `
   width: 100%;
-  padding: 25px;
   text-align: center;
+  h1 {
+    text-align: left;
+    .service_name {
+      margin-top: 0;
+    }
+  }
 `
 class Heading extends React.Component {
 
   render () {
     return (
       <HeadingWrapper>
-        <h2>
+        <h1 className="service_name">
           {this.props.title}
-        </h2>
-        <h2 className="subtitle">
+        </h1>
+        <h1 className="services">
           {this.props.subtitle}
-        </h2>
+        </h1>
       </HeadingWrapper>
     );
   }

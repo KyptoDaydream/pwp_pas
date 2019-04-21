@@ -15,8 +15,6 @@ import Heading from './heading';
 
 const WorkWrapper = styled.div `
   width: 100%;
-  background: #eeeeee;
-  padding: 50px;
 `
 const WorkMargin = styled.div`
   max-width: 940px;
@@ -54,9 +52,9 @@ function getSorting(order, orderBy) {
 }
 
 const rows = [
-  { id: 'name', numeric: false, disablePadding: true, label: 'Pozicia' },
+  { id: 'name', numeric: false, disablePadding: true, label: 'Pozícia' },
   { id: 'calories', numeric: true, disablePadding: false, label: 'Mesto' },
-  { id: 'fat', numeric: true, disablePadding: false, label: 'Volne miesta' },
+  { id: 'fat', numeric: true, disablePadding: false, label: 'Voľné miesta' },
 ];
 
 class EnhancedTableHead extends React.Component {
@@ -109,6 +107,8 @@ EnhancedTableHead.propTypes = {
 
 const styles = theme => ({
   root: {
+    boxShadow: '0 20px 40px 0 rgba(0,0,0,.05)',
+    borderRadius: 0,
     width: '100%',
     marginTop: theme.spacing.unit * 3,
   },
@@ -125,24 +125,20 @@ class EnhancedTable extends React.Component {
     order: 'desc',
     orderBy: 'fat',
     selected: [],
-    data: [
-      createData('Cupcake', 'Kosice', 3.7),
-      createData('Donut', 'Kosice', 25.0),
-      createData('Eclair', 'Kosice', 16.0),
-      createData('Frozen yoghurt', 'Kosice', 6.0),
-      createData('Gingerbread', 'Kosice', 16.0),
-      createData('Honeycomb', 'Kosice', 3.2),
-      createData('Ice cream sandwich', 'Kosice', 21),
-      createData('Jelly Bean', 'Kosice', 0.0),
-      createData('KitKat', 'Kosice', 26.0),
-      createData('Lollipop', 'Kosice', 0.2),
-      createData('Marshmallow', 'Kosice', 0),
-      createData('Nougat', 'Kosice', 19.0),
-      createData('Oreo', 'Kosice', 18.0),
-    ],
+    data: [],
     page: 0,
     rowsPerPage: 5,
   };
+
+  componentWillMount() {
+    const post_data = this.props.data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.type === 'pozicie');
+    const state_data = [];
+    console.log(post_data);
+    post_data.forEach(post => {
+      state_data.push(createData(post.node.frontmatter.position, post.node.frontmatter.city, post.node.frontmatter.space))
+    });
+    this.setState({data: state_data});
+  }
 
   handleRequestSort = (event, property) => {
     const orderBy = property;
@@ -202,7 +198,7 @@ class EnhancedTable extends React.Component {
     return (
       <WorkWrapper>
         <WorkMargin>
-          <Heading title="Pracovne pozicie" subtitle="Prehlad sprostredkovanych pracovnych pozicii"/>
+          <Heading title="pracovná ponuka" subtitle="Prehľad ponúkaných pracovných miest" />
           <Paper className={classes.root}>
             <div className={classes.tableWrapper}>
               <Table className={classes.table} aria-labelledby="tableTitle">
@@ -221,8 +217,8 @@ class EnhancedTable extends React.Component {
                       return (
                         <TableRow
                           hover
-                          onClick={event => this.handleClick(event, n.id)}
-                          role="checkbox"
+                          /* onClick={event => this.handleClick(event, n.id)}
+                          role="checkbox" */
                           aria-checked={isSelected}
                           tabIndex={-1}
                           key={n.id}
@@ -248,13 +244,15 @@ class EnhancedTable extends React.Component {
               rowsPerPageOptions={[5, 10, 25]}
               component="div"
               count={data.length}
+              labelDisplayedRows={({ from, to, count }) => `${from}-${to} z ${count} pozícií`}
+              labelRowsPerPage="Pozície na stránku:"
               rowsPerPage={rowsPerPage}
               page={page}
               backIconButtonProps={{
-                'aria-label': 'Previous Page',
+                'aria-label': 'Predošlá stránka',
               }}
               nextIconButtonProps={{
-                'aria-label': 'Next Page',
+                'aria-label': 'Nasledujúca stránka',
               }}
               onChangePage={this.handleChangePage}
               onChangeRowsPerPage={this.handleChangeRowsPerPage}

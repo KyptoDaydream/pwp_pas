@@ -8,15 +8,16 @@ const Button = styled.div`
   padding: 10px 25px;
   font-size: 12px;
   font-weight: 700;
-  color: white;
-  cursor: pointer;
   display: inline-block;
   margin-top: 30px;
   position: relative;
-  span.buttonText {
+  a.buttonText {
     margin-top: 0px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
   }
-  span:after {
+  a:after {
     content: '';
     background: url(${arrow_white});
     display: inline-block;
@@ -27,15 +28,17 @@ const Button = styled.div`
     transition: 0.4s;
   }
   &:hover {
-    color: orange;
     transition: 0.4s;
-    span.buttonText:after{
+    a.buttonText {
+      color: orange;
+    }
+    a.buttonText:after{
       margin-left: 25px;
     }
   }  
 `
 export default (props) => (
   <Button>
-    <span className="buttonText">{props.buttonText}</span>
+    <a className="buttonText" href={props.buttonLink}>{props.buttonText}</a>
   </Button>
 )

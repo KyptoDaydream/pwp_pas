@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import logo from "../assets/logo_white_orange.png"
+import logo from "../assets/logo_yellow.png"
+import logo_black from "../assets/logo_yellow_black.png"
 import Burger from "./burger"
 
 const HeaderWrapper = styled.div `
@@ -10,32 +11,57 @@ const HeaderWrapper = styled.div `
   background: transparent;
   position: fixed;
   top: 0;
+  border-top: 10px solid var(--main-yellow);
   z-index: 9999
 `
-
 const Logo = styled.div `
   margin-left: 50px;
   margin-top: 15px;
-  width: 150px;
+  width: 120px;
   height: 135px;
   position: absolute;
   display: inline-block;
-  background: url(${logo});
+  transition: 0.5s;
+  &.white_logo {
+    background: url(${logo});
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  }
+  &.black_logo {
+    background: url(${logo_black});
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  }
+  
 `
 class Header extends React.Component  {
   constructor(props) {
     super(props);
-    this.state = { showMenu: true };
+    this.state = { 
+      color: 'logo',
+      showMenu: true 
+    };
   }
   
+  listenScrollEvent = e => {
+    if (window.scrollY < 400) {
+      this.setState({color: 'logo'})
+    } else {
+      this.setState({color: 'logo_black'})
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
   render() {
-    // const { children, data } = this.props;
+    const logo_class = this.state.color === 'logo' ? 'white_logo' : 'black_logo';
     return (
       <HeaderWrapper>
-        <Logo />
+        <Logo className={logo_class} props={this.state.color}/>
         <Burger />
       </HeaderWrapper>
     )
