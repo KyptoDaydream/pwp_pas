@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Header from "../components/header"
 import "../styles/global.css"
 import stripe_bg from "../assets/stripe_bg.png"
-import Divider from '../components/Divider'
+import Divider from '../components/divider'
 import PageLayoutContact from '../components/pageLayoutContact'
 import TitleImage from '../components/titleImage'
 import Footer from '../components/footer'

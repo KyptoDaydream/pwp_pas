@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Grid from '@material-ui/core/Grid';
 import side_image from '../assets/side_image_3.jpg'
-import Divider from './Divider'
+import Divider from './divider'
 import ButtonWrapper from './buttonWrapper'
 import WorkTable from './workTable'
 

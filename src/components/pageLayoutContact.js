@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Grid from '@material-ui/core/Grid';
 import side_image from '../assets/side_image_4.jpg'
-import Divider from './Divider'
+import Divider from './divider'
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 const ServicesWrapper = styled.div `

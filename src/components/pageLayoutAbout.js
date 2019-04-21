@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Grid from '@material-ui/core/Grid';
 import side_image from '../assets/side_image_2.jpg'
-import Divider from '../components/Divider'
+import Divider from '../components/divider'
 import ButtonWrapper from '../components/buttonWrapper'
 
 const ServicesWrapper = styled.div `

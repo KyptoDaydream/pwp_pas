@@ -3,6 +3,7 @@ import styled from "styled-components"
 import logo from "../assets/logo_yellow.png"
 import logo_black from "../assets/logo_yellow_black.png"
 import Burger from "./burger"
+import { Link } from "gatsby"
 
 const HeaderWrapper = styled.div `
   margin: 0;
@@ -61,7 +62,9 @@ class Header extends React.Component  {
     const logo_class = this.state.color === 'logo' ? 'white_logo' : 'black_logo';
     return (
       <HeaderWrapper>
-        <Logo className={logo_class} props={this.state.color}/>
+        <Link to="/">
+          <Logo className={logo_class} props={this.state.color}/>
+        </Link>
         <Burger />
       </HeaderWrapper>
     )

@@ -9,7 +9,7 @@ import Services from '../components/services'
 import Footer from '../components/footer'
 import "../styles/global.css"
 import stripe_bg from "../assets/stripe_bg.png"
-import Divider from '../components/Divider'
+import Divider from '../components/divider'
 import ButtonWrapperDouble from '../components/buttonWrapperDouble'
 import ButtonWrapper from '../components/buttonWrapper'
 import Pros from '../components/pros'
