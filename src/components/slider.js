@@ -26,16 +26,45 @@ const SliderWrapper = styled.div `
     bottom: 140px;
     left: 140px;
   }
+  @media (min-width: 1400px) {
+    h2 {
+      max-width: 700px;
+      font-size: 32px;
+    }
+    .flavour_text {
+    font-size:1.1em;
+    width: 600px;
+  }
+  }
+  @media (max-width: 980px) {
+    h2 {
+      position: relative;
+      margin: 0 auto;
+      padding-top: 250px;
+      left: auto;
+      bottom: auto;
+    }
+    .flavour_text {
+      position: relative;
+      margin: 0 auto;
+      left: auto;
+      bottom: auto;
+      width: 400px;
+  }
+  }
   `
 const Slide = styled.div `
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
-  /* background: -moz-linear-gradient(top, rgba(0,17,39,0) 0%, rgba(0,17,39,1) 100%); /* FF3.6-15 */
-  /* background: -webkit-linear-gradient(top, rgba(0,17,39,0) 0%,rgba(0,17,39,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  /* background: linear-gradient(to bottom, rgba(0,17,39,0) 0%,rgba(0,17,39,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00001127', endColorstr='#001127',GradientType=0 ); /* IE6-9 */
-
+  background: -moz-linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
+  background: -webkit-linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
+  background: linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
+  @media (max-width: 980px) {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 `
 const SlideContent = styled.div`
   width: 500px;
@@ -45,11 +74,12 @@ const SlideContent = styled.div`
   position: absolute;
   color: var(--main-white);
   font-weight: 700;
-  /* background: #f7f8f9; */
-  /* background: rgba(238,146,12,0.9); /* Old browsers */
-  /* background: -moz-linear-gradient(45deg, rgba(238,146,12,0.9) 0%, rgba(255,61,23,0.9) 100%); /* FF3.6-15 */
-  /* background: -webkit-linear-gradient(45deg, rgba(238,146,12,0.9) 0%,rgba(255,61,23,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
-  /* background: linear-gradient(45deg, rgba(238,146,12,0.9) 0%,rgba(255,61,23,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  @media (max-width: 980px) {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 340px;
+  }
 `
 class Slider extends React.Component  {
   constructor(props) {

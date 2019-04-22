@@ -45,6 +45,12 @@ const ServicesMargin = styled.div`
   max-width: 940px;
   margin: 0 auto;
   color: var(--main-white);
+  @media (max-width: 640px) {
+    .responsive_footer {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 const Icon = styled.div`
   margin-top: 20px;
@@ -77,20 +83,20 @@ class Footer extends React.Component {
         <div className='gradient_bg'>
         <ServicesMargin>
           <Grid container spacing={24}>
-            <Grid item xs={6}>
+            <Grid item xs={6} className="responsive_footer">
               <img alt="logo" className="footer_logo" src={logo} />
               <p className="footer_text">
               Náš úspech je našim záväzkom a motiváciou napredovať a byť strategickým partnerom
               </p>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={3} className="responsive_footer">
               <Link to="/o_nas" className="classic_link footer_menu">O Nas</Link>
               <Link to="/sluzby" className="classic_link footer_menu">Info Pre Firmy</Link>
               <Link to="/ponuka_prace" className="classic_link footer_menu">Pracovne Pozicie</Link>
               <Link to="/blog" className="classic_link footer_menu">Blog</Link>
               <Link to="/kontakt" className="classic_link footer_menu">Kontakt</Link>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={3} className="responsive_footer">
               <p className="footer_kontakt">tel.: 0917 237 471</p>
               <p>adresa.: moldavska cesta 43/A</p>
               <p>mail.: <a className="classic_link" href="mailto:pas.services.ke@gmail.com">pas.services.ke@gmail.com</a></p>

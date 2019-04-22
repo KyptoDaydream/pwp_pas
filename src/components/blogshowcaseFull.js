@@ -10,6 +10,12 @@ const BlogWrapper = styled.div `
 const BlogMargin = styled.div`
   max-width: 940px;
   margin: 0 auto;
+  @media (max-width: 640px) {
+    .responsive_blog {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 class BlogShowcaseFull extends React.Component {
 
@@ -21,7 +27,7 @@ class BlogShowcaseFull extends React.Component {
         <BlogMargin>
           <Grid container spacing={24}>
             {post_data.map(post =>
-               <Grid item xs={4}>
+               <Grid item xs={4} className="responsive_blog">
                 <PostThumbnail data={post}/>
                </Grid>)}
         </Grid>

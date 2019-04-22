@@ -22,6 +22,19 @@ const ServicesWrapper = styled.div `
     -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
     box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
   }
+  @media (max-width: 980px) {
+    :before {
+      left: 30px;
+      right: 30px;
+    }
+    .responsive_grid_1 {
+      display: none;
+    }
+    .responsive_grid_2 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 const ServicesMargin = styled.div`
   max-width: 940px;
@@ -90,6 +103,9 @@ const SideImage = styled.div `
   background-size: cover;
   -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
   box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+  @media (max-width: 980px) {
+    display: none;
+  }
 `
 const ExpandIcon = styled.div`
   background: url(${arrow});
@@ -114,8 +130,8 @@ class Services extends React.Component {
         <SideImage />
         <ServicesMargin>
         <Grid container spacing={24}>
-            <Grid item xs={4}></Grid>
-            <Grid item xs={8}>
+            <Grid item xs={4} className="responsive_grid_1"></Grid>
+            <Grid item xs={8} className="responsive_grid_2">
               <div className="title_wrapper">
               <h1 className="service_name">agentura zamestnania</h1>
               <h1 className="services">Logistika, priemysel, stavebníctvo a administratíva</h1>
@@ -158,8 +174,8 @@ class Services extends React.Component {
           </Grid>
 
           <Grid container spacing={24}>
-            <Grid item xs={4}></Grid>
-            <Grid item xs={8}>
+            <Grid item xs={4} className="responsive_grid_1"></Grid>
+            <Grid item xs={8} className="responsive_grid_2">
               <div className="title_wrapper">
               <h1 className="service_name">agentura služieb</h1>
               <h1 className="services">Služby so starostlivosťou o klienta 24/7</h1>

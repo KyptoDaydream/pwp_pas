@@ -14,6 +14,12 @@ const ProsMargin = styled.div`
   max-width: 940px;
   margin: 0 auto;
   z-index: 999;
+  @media (max-width: 480px) {
+    .responsive_pros {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 const ProsImage = styled.div`
   height: 100px;
@@ -33,19 +39,19 @@ class Pros extends React.Component {
       <ProsWrapper>
         <ProsMargin>
           <Grid container spacing={24}>
-            <Grid item xs={4}>
+            <Grid item xs={4} className="responsive_pros">
               <ProsImage props={pros1}/>
               <ProsText>
                 Služby "šijeme" na mieru na základe konzultácie s klientom
               </ProsText>  
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={4} className="responsive_pros">
               <ProsImage props={pros2}/>
               <ProsText>
                 Klientom garantujeme servis k poskytovaným službám 24/7 a flexibilný prístup
               </ProsText> 
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={4} className="responsive_pros">
               <ProsImage props={pros3}/>
               <ProsText>
                 Široké spektrum naších služieb zabezpečujeme expresne do 24h.

@@ -24,6 +24,19 @@ const ServicesWrapper = styled.div `
     -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
     box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
   }
+  @media (max-width: 980px) {
+    :before {
+      left: 30px;
+      right: 30px;
+    }
+    .responsive_grid_1 {
+      display: none;
+    }
+    .responsive_grid_2 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 const ServicesMargin = styled.div`
   max-width: 940px;
@@ -99,6 +112,9 @@ const SideImage = styled.div `
   background-size: cover;
   -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
   box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+  @media (max-width: 980px) {
+    display: none;
+  }
 `
 const ExpandIcon = styled.div`
   background: url(${arrow});
@@ -123,8 +139,8 @@ class PageLayout extends React.Component {
         <SideImage />
         <ServicesMargin>
         <Grid container spacing={24}>
-            <Grid item xs={4}></Grid>
-            <Grid item xs={8} className="text_wrapper">
+            <Grid item xs={4} className="responsive_grid_1"></Grid>
+            <Grid item xs={8} className="text_wrapper responsive_grid_2">
           
               <p>
               Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.

@@ -7,6 +7,11 @@ const ButtonContainer = styled.div `
   justify-content: center;
   width: 100%;
   padding: 100px 0px 80px 0px;
+  @media (max-width: 640px) {
+    flex-flow: column;
+    align-items: center;
+  }
+}
 `
 
 class ButtonWrapperDouble extends React.Component {

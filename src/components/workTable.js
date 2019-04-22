@@ -15,6 +15,10 @@ import Heading from './heading';
 
 const WorkWrapper = styled.div `
   width: 100%;
+  @media (max-width: 980px) {
+    width: auto;
+    margin: 20px;
+  }
 `
 const WorkMargin = styled.div`
   max-width: 940px;

@@ -80,6 +80,22 @@ const MenuWrapper = styled.div `
     display: block;
     color: black;
   }
+  @media (min-width: 1400px) {
+    .bm-item-list {
+    margin-top: 15%;
+    margin-left: 20%;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .bm-item-list {
+    width: 100%;
+    margin: 0;
+    padding-top: 140px;
+    padding-left: 30px;
+    height: auto !important;
+  }
+  }
 `
 const MenuItem = styled.span`
   font-family: 'Poppins', sans-serif;
@@ -88,6 +104,9 @@ const MenuItem = styled.span`
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-color: var(--main-yellow);
+  @media (max-width: 550px) {
+    font-size: 32px;
+  }
 `
 const Kontakt = styled.div`
     position: absolute;
@@ -101,6 +120,13 @@ const Kontakt = styled.div`
     font-weight: 900;
     color: var(--main-yellow);
     text-transform: uppercase;
+  }
+  @media (min-width: 1400px) {
+    top: 45%;
+    left: 60%;
+  }
+  @media (max-width: 1000px) {
+    display: none !important;
   }
 `
 const Icon = styled.div`

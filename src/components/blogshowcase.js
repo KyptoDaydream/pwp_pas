@@ -14,6 +14,12 @@ const BlogWrapper = styled.div `
 const BlogMargin = styled.div`
   max-width: 940px;
   margin: 0 auto;
+  @media (max-width: 640px) {
+    .responsive_blog {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 `
 class BlogShowcase extends React.Component {
 
@@ -25,13 +31,13 @@ class BlogShowcase extends React.Component {
         <BlogMargin>
           <Heading title="blog" subtitle="Súhrn užitočných informácií, ktoré vás môžu zaujímať"/>
           <Grid container spacing={24}>
-            <Grid item xs={4}>
+            <Grid item xs={4} className="responsive_blog">
               <PostThumbnail data={post_data[0]}/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={4} className="responsive_blog">
               <PostThumbnail data={post_data[1]}/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={4} className="responsive_blog">
               <PostThumbnail data={post_data[2]}/>
             </Grid>
         </Grid>
