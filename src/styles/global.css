@@ -37,6 +37,23 @@ a {
   text-decoration: none;
 }
 
+a.classic_link { 
+  color: var(--text-gray);
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--main-yellow) 0%, var(--main-yellow) 100%);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 10%;
+  transition: 0.1s;
+}
+a.classic_link:hover {
+  text-decoration: none;
+  background-image: linear-gradient(to right, var(--main-yellow) 0%, var(--main-yellow) 100%);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 30%;
+}
+
 h1.services {
   font-family: 'Muli', sans-serif;
   font-weight: 400;
@@ -101,10 +118,10 @@ h4 {
   margin-left: 40px;
 }
 h5 {
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: 'Roboto Condensed', sans-serif;
+  color: var(--main-yellow);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   text-align: left;
   margin-left: 40px;
 }

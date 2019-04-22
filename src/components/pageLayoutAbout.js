@@ -157,7 +157,7 @@ class PageLayoutAbout extends React.Component {
                 <li>Prevezmeme všetky potrebné pracovno-právne úkony, personálnu a mzdovú agendu voči zamestnancovi</li>
               </ul>
               <Divider height="70px" />
-              <ButtonWrapper buttonText='Nase sluzby' buttonLink='/asd/' />
+              <ButtonWrapper buttonText='Nase sluzby' buttonLink='/sluzby' />
             </Grid>
           </Grid>
         </ServicesMargin>

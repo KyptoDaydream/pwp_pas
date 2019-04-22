@@ -213,7 +213,7 @@ class PageLayout extends React.Component {
                 </ExpansionPanelDetails>
               </ExpansionPanel>
               <Divider height="70px" />
-              <ButtonWrapper buttonText='o nás' buttonLink='/asd/' />
+              <ButtonWrapper buttonText='o nás' buttonLink='/o_nas' />
             </Grid>
           </Grid>
         </ServicesMargin>

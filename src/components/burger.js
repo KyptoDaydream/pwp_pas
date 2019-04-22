@@ -69,6 +69,12 @@ const MenuWrapper = styled.div `
     a:hover {
       color: var(--main-yellow);
     }
+    a.classic_link {
+      color: var(--text-grey)
+    }
+    a.class_link:hover {
+      color: var(--text-grey)
+    }
   }
   .ahoj {
     display: block;
@@ -116,7 +122,7 @@ const Icon = styled.div`
     background-image: url(${place_orange});
   }
   &:hover {
-    background-color: black;
+    background-color: var(--dark-blue);
   }
 `
 class Burger extends React.Component {
@@ -133,10 +139,10 @@ class Burger extends React.Component {
             <span>Kontakt</span>
             <p>moldavska cesta 43/A</p>
             <p>0917 237 471</p>
-            <p>info@pas.sk</p>
-            <Icon className='facebook' />
-            <Icon className='mail' />
-            <Icon className='place' />
+            <p><a className="classic_link" href="mailto:pas.services.ke@gmail.com">pas.services.ke@gmail.com</a></p>
+            <a href="https://www.facebook.com/passervices.sk/" rel="noopener noreferrer" target="_blank"><Icon className='facebook' /></a>
+            <a href="mailto:pas.services.ke@gmail.com"><Icon className='mail' /></a>
+            <a href="https://www.google.com/maps/place/Moldavsk%C3%A1+cesta+43,+040+11+Ko%C5%A1ice/@48.7008844,21.2371226,17z/data=!4m5!3m4!1s0x473ee01a682c3771:0xa87216d493a8ffd3!8m2!3d48.7008703!4d21.2388607" rel="noopener noreferrer" target="_blank"><Icon className='place' /></a>
           </Kontakt>
         </Menu>
       </MenuWrapper>

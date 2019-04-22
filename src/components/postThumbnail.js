@@ -14,14 +14,9 @@ const PostWrapper = styled.div `
   .showcase_title_link {
     text-decoration: none;
   }
-  .showcase_classic_link {
-    color: orange;
-    font-weight: 500;
-    text-align: center;
-    display: block;
-    text-decoration: none;
+  .classic_link {
   }
-  .showcase_classic_link:hover {
+  .classic_link:hover {
     text-decoration: underline;
   }
   :hover .post_thumbnail {
@@ -33,9 +28,14 @@ const PostWrapper = styled.div `
   :hover h3 {
     color: orange;
     transition: 0.2s;
+    margin-top: 23px;
   }
-  :hover .showcase_classic_link {
-    text-decoration: underline;
+  :hover .classic_link {
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--main-yellow) 0%, var(--main-yellow) 100%);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 100% 30%;
   }
 `
 class PostThumbnail extends React.Component {
@@ -47,7 +47,9 @@ class PostThumbnail extends React.Component {
           <img alt="thumbnail" className="post_thumbnail" src={post_data.thumbnail} />
         </a>
         <a className="showcase_title_link" href={post_data.path}><h3>{post_data.title}</h3></a>
-        <a className="showcase_classic_link" href={post_data.path}>celý článok</a>
+        <div style={{textAlign: 'center'}}>
+          <a className="classic_link" href={post_data.path}>celý článok</a>
+        </div>
       </PostWrapper>
     );
   }

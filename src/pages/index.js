@@ -32,10 +32,10 @@ class Index extends React.Component {
         <Pros />
         <Divider height="100px" />
         <Services/>
-        <ButtonWrapperDouble buttonLink="/ahoj" buttonText='viac o nás' buttonLink2="/ahoj" buttonText2='viac o našich službách' />
+        <ButtonWrapperDouble buttonLink="/o_nas" buttonText='viac o nás' buttonLink2="/sluzby" buttonText2='viac o našich službách' />
         <WorkTable data={data}/>
         <BlogShowcase data={data}/>
-        <ButtonWrapper buttonLink="/ahoj" buttonText='všetky články' />
+        <ButtonWrapper buttonLink="/blog" buttonText='všetky články' />
         <Footer />
       </PageWrapper>
     )

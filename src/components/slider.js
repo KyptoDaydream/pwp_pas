@@ -12,6 +12,20 @@ const SliderWrapper = styled.div `
   background: url(${slide_1});
   background-size: cover;
   top: 0;
+  h2 {
+    position: absolute;
+    bottom: 240px;
+    left: 140px;
+    max-width: 400px;
+    font-size: 24px;
+  }
+  .flavour_text {
+    color: var(--main-white);
+    position: absolute;
+    width: 276px;
+    bottom: 140px;
+    left: 140px;
+  }
   `
 const Slide = styled.div `
   width: 100%;
@@ -25,17 +39,12 @@ const Slide = styled.div `
 `
 const SlideContent = styled.div`
   width: 500px;
-  height: 400px;
+  height: 300px;
   bottom: 0;
   right: 0;
   position: absolute;
   color: var(--main-white);
   font-weight: 700;
-  .flavour_text {
-    width: 276px;
-    margin-left: 7px;
-    margin-bottom: 50px;
-  }
   /* background: #f7f8f9; */
   /* background: rgba(238,146,12,0.9); /* Old browsers */
   /* background: -moz-linear-gradient(45deg, rgba(238,146,12,0.9) 0%, rgba(255,61,23,0.9) 100%); /* FF3.6-15 */
@@ -53,13 +62,15 @@ class Slider extends React.Component  {
     return (
       <SliderWrapper>
         <Slide/>
-        <SlideContent>
-          <p className="flavour_text">
+        <h2>Dodávateľ na ktorého sa môžete spoľahnúť</h2>
+
+        <p className="flavour_text">
           Sme stabilný partner pre Vaše dodávky služieb 
 Sprostredkovateľská firma, ktorá pomáha firmám zabezpečiť pracovné miesta, podľa požiadaviek do 24h.
-          </p>
-          <ButtonBig buttonText="spolupráca s firmami" buttonLink="/ahoj/" />
-          <ButtonBig buttonText="ponuka práce" buttonLink="/ahoj/" />
+          </p>    
+        <SlideContent>
+          <ButtonBig buttonText="spolupráca s firmami" buttonLink="/sluzby" />
+          <ButtonBig buttonText="ponuka práce" buttonLink="/ponuka_prace" />
         </SlideContent>
       </SliderWrapper>
     )

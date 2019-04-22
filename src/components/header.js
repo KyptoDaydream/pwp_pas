@@ -59,7 +59,8 @@ class Header extends React.Component  {
   }
 
   render() {
-    const logo_class = this.state.color === 'logo' ? 'white_logo' : 'black_logo';
+    console.log(this.props);
+    const logo_class = this.state.color === 'logo' && this.props.blog !== true ? 'white_logo' : 'black_logo';
     return (
       <HeaderWrapper>
         <Link to="/">
