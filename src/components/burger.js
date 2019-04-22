@@ -16,6 +16,16 @@ const MenuWrapper = styled.div `
     right: 50px;
     top: 50px;
   }
+  @media (max-width: 700px) {
+    .bm-burger-button {
+    z-index: 1000;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 25px;
+  }
+  }
   .bm-burger-bars {
     background: var(--main-yellow);
     border-radius: 5px;

@@ -52,7 +52,19 @@ const SliderWrapper = styled.div `
       width: 400px;
   }
   }
-  `
+  @media (max-width: 400px) {
+    h2 {
+      padding-top: 150px;
+      max-width: 270px;
+    }
+    .flavour_text {
+      position: relative;
+      margin: 0 auto;
+      left: auto;
+      bottom: auto;
+      width: 270px;
+  }
+`
 const Slide = styled.div `
   width: 100%;
   height: 100%;

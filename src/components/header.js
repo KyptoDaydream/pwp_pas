@@ -13,7 +13,11 @@ const HeaderWrapper = styled.div `
   position: fixed;
   top: 0;
   border-top: 10px solid var(--main-yellow);
-  z-index: 9999
+  z-index: 9999;
+  @media (max-width: 700px) {
+    height: 70px;
+    background: var(--dark-blue);
+  }
 `
 const Logo = styled.div `
   margin-left: 50px;
@@ -34,6 +38,16 @@ const Logo = styled.div `
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  }
+  @media (max-width: 700px) {
+    width: 40px;
+    height: 40px;
+    &.black_logo {
+      background: url(${logo});
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    }
   }
   
 `
