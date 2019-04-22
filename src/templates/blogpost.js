@@ -7,6 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import stripe_bg from "../assets/stripe_bg.png"
 import Footer from '../components/footer'
 import Header from '../components/header'
+import { Helmet } from "react-helmet"
+import favicon from "../assets/favicon.png"
 
 const PostWrapper = styled.div`
   background-image: url(${stripe_bg});
@@ -73,6 +75,14 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <PostWrapper>
+      <Helmet link={[
+            {rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+          ]}>
+          <meta charSet="utf-8" />
+          <title>PaS Services | {frontmatter.title}</title>
+          <meta name="description" content={frontmatter.title}/>
+          <meta name="keywords" content="Pas Services, Agentura PaS"/>
+        </Helmet>
     <Header blog={true}/>
     <Divider height="120px" />
     <ServicesWrapper>

@@ -7,6 +7,8 @@ import Divider from '../components/divider'
 import PageLayoutContact from '../components/pageLayoutContact'
 import TitleImage from '../components/titleImage'
 import Footer from '../components/footer'
+import { Helmet } from "react-helmet"
+import favicon from "../assets/favicon.png"
 
 const PageWrapper = styled.div`
   margin: 0;
@@ -18,6 +20,14 @@ class PageAbout extends React.Component {
   render() {
     return (
       <PageWrapper>
+        <Helmet link={[
+            {rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+          ]}>
+          <meta charSet="utf-8" />
+          <title>PaS Services | kontakt</title>
+          <meta name="description" content="agentura prace, agentura sluzieb"/>
+          <meta name="keywords" content="Pas Services, Agentura PaS"/>
+        </Helmet>
         <Header />
         <TitleImage componentClass="contact" title="Kde nás nájdete"/>
         <Divider height="100px" />

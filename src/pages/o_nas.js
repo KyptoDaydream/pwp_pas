@@ -7,6 +7,7 @@ import Divider from '../components/divider'
 import PageLayoutAbout from '../components/pageLayoutAbout'
 import TitleImage from '../components/titleImage'
 import Footer from '../components/footer'
+import { Helmet } from "react-helmet"
 
 const PageWrapper = styled.div`
   margin: 0;
@@ -18,6 +19,12 @@ class PageAbout extends React.Component {
   render() {
     return (
       <PageWrapper>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>PaS Services | o nás</title>
+          <meta name="description" content="agentura prace, agentura sluzieb"/>
+          <meta name="keywords" content="Pas Services, Agentura PaS"/>
+        </Helmet>
         <Header />
         <TitleImage componentClass="about_us" title="Stabilný partner pre Vaše podnikanie"/>
         <Divider height="100px" />

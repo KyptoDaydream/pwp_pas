@@ -13,6 +13,8 @@ import Divider from '../components/divider'
 import ButtonWrapperDouble from '../components/buttonWrapperDouble'
 import ButtonWrapper from '../components/buttonWrapper'
 import Pros from '../components/pros'
+import { Helmet } from "react-helmet"
+import favicon from "../assets/favicon.png"
 
 const PageWrapper = styled.div`
   margin: 0;
@@ -26,6 +28,14 @@ class Index extends React.Component {
     console.log(data);
     return (
       <PageWrapper>
+        <Helmet link={[
+            {rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
+          ]}>
+          <meta charSet="utf-8" />
+          <title>PaS Services</title>
+          <meta name="description" content="agentura prace, agentura sluzieb"/>
+          <meta name="keywords" content="Pas Services, Agentura PaS"/>
+        </Helmet>
         <Header />
         <Slider />
         <Divider height="100px" />
