@@ -92,8 +92,8 @@ class Footer extends React.Component {
             <Grid item xs={3} className="responsive_footer">
               <Link to="/o_nas" className="classic_link footer_menu">O Nas</Link>
               <Link to="/sluzby" className="classic_link footer_menu">Info Pre Firmy</Link>
-              <Link to="/ponuka_prace" className="classic_link footer_menu">Pracovne Pozicie</Link>
-              <Link to="/blog" className="classic_link footer_menu">Blog</Link>
+              {/*<Link to="/ponuka_prace" className="classic_link footer_menu">Pracovne Pozicie</Link>
+              <Link to="/blog" className="classic_link footer_menu">Blog</Link>*/}
               <Link to="/kontakt" className="classic_link footer_menu">Kontakt</Link>
             </Grid>
             <Grid item xs={3} className="responsive_footer">

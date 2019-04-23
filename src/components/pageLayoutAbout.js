@@ -123,13 +123,13 @@ class PageLayoutAbout extends React.Component {
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <div className="title_wrapper">
               <h1 className="service_name">komplexnosť a flexibilita</h1>
-              <h1 className="services">Dodávateľ na ktorého sa môžete spoľahnúť</h1>
+              <h1 className="services">Partner, na ktorého sa môžete spoľahnúť</h1>
               </div>
               <p>
-              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trh svoju kvalitu v logistike, doprave a špedícii, ale taktiež aj iných odvetviach.                                               
-              </p>
+              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoje služby v oblasti dočasného zamestnávania, logistike, komplexného firemného servisu a iných odvetviach.
+            </p>
               <p>
-              Najdôležitejšími faktormi sú spokojnosť zákazníkov, odbornosť zamestnancov a kvalitné zázemie.                                                                                                                                     
+              Najdôležitejšími faktormi sú spokojnosť zákazníkov, odbornosť zamestnancov a kvalitné zázemie.
               </p>
               <Divider height="70px" />
               <p className="text_title">
@@ -142,7 +142,6 @@ class PageLayoutAbout extends React.Component {
                 <li>Flexibilný prístup k vašim potrebám</li>
                 <li>Široké portfólio služieb</li>
                 <li>Spolupráca s veľkými zahraničnými korporáciami</li>
-                <li>Rozumná cena</li>
                 <li>Odbornosť zamestnancov a kvalitné zázemie firmy</li>
               </ul>
               <Divider height="70px" />

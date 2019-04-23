@@ -80,7 +80,8 @@ const Slide = styled.div `
 `
 const SlideContent = styled.div`
   width: 500px;
-  height: 300px;
+  /* height: 300px; */
+  height: 220px;
   bottom: 0;
   right: 0;
   position: absolute;
@@ -104,15 +105,14 @@ class Slider extends React.Component  {
     return (
       <SliderWrapper>
         <Slide/>
-        <h2>Dodávateľ na ktorého sa môžete spoľahnúť</h2>
+        <h2>Partner pre servis vašej firmy, na ktorého sa môžete spoľahnúť</h2>
 
         <p className="flavour_text">
-          Sme stabilný partner pre Vaše dodávky služieb 
-Sprostredkovateľská firma, ktorá pomáha firmám zabezpečiť pracovné miesta, podľa požiadaviek do 24h.
-          </p>    
+        Sme agentúra v oblasti poskytovania komplexného servisu personalistiky, logistiky, cateringu a teambuildingu
+        </p>    
         <SlideContent>
           <ButtonBig buttonText="spolupráca s firmami" buttonLink="/sluzby" />
-          <ButtonBig buttonText="ponuka práce" buttonLink="/ponuka_prace" />
+          {/* <ButtonBig buttonText="ponuka práce" buttonLink="/ponuka_prace" /> */}
         </SlideContent>
       </SliderWrapper>
     )

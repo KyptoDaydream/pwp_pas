@@ -141,13 +141,9 @@ class PageLayout extends React.Component {
         <Grid container spacing={24}>
             <Grid item xs={4} className="responsive_grid_1"></Grid>
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
-          
-              <p>
-              Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
-              </p>
               <div className="title_wrapper">
-              <h1 className="service_name">agentura zamestnania</h1>
-              <h1 className="services">Logistika, priemysel, stavebníctvo a administratíva</h1>
+              <h1 className="service_name">agentura zamestnávania</h1>
+              <h1 className="services">V oblastiach logistiky, priemyslu, stavebníctva a administratíve</h1>
               </div>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
@@ -183,15 +179,25 @@ class PageLayout extends React.Component {
                   </ul>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
+              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel4'} onChange={this.handleChange('panel4')}>
+                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
+                  <p>Povolenie k činnosti</p>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                  <p>
+                  Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
+                  </p>
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
 
          
               <div className="title_wrapper">
-              <h1 className="service_name">agentura služieb</h1>
+              <h1 className="service_name">servis pre firmy</h1>
               <h1 className="services">Služby so starostlivosťou o klienta 24/7</h1>
               </div>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel4'} onChange={this.handleChange('panel4')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Zabezpečenie prepravy do 3,5t v rámci SR a EÚ</p>
+                  <p>Dopravca</p>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <ul>
@@ -199,6 +205,7 @@ class PageLayout extends React.Component {
                     <li>Expresná doprava v rámci SR do 12h</li>
                     <li>Expresná doprava v rámci EÚ do 24h</li>
                     <li>Automatické poistenie tovaru</li>
+                    <li>Koordinácia dodania tovaru</li>
                   </ul>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
@@ -207,17 +214,20 @@ class PageLayout extends React.Component {
                   <p>Upratovacie služby</p>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
+                  <div>
+                  <p>Upratovacie služby  sú poskytované:</p>
                   <ul>
-                    <li>Upratovacie služby poskytujeme v interiéry a exteriéry</li>
-                    <li>Kancelárske a skladové priestory</li>
-                    <li>Zabezpečíme vám upratovanie s kvalitnými prostriedkami a vyškoleným tímom</li>
-                    <li>Doplnková služba - Kosenie trávy</li>
+                    <li>v interiéri a exteriéri</li>
+                    <li>kancelárskych a skladových priestoroch</li>
+                    <li>kvalitnými prostriedkami a vyškoleným tímom</li>
                   </ul>
+                  <p>Doplnková služba - údržba a kosenie vonkajších trávnatých plôch firmy</p>
+                  </div>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel6'} onChange={this.handleChange('panel6')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>služby zamestnancom</p>
+                  <p>Služby zamestnancom</p>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                   <ul>

@@ -55,7 +55,8 @@ const MenuWrapper = styled.div `
   }
   .bm-item-list {
     width: 600px;
-    margin-top: 140px;
+    /* margin-top: 140px; */
+    margin-top: 240px;
     margin-left: 100px;
     height: auto !important;
   }
@@ -92,7 +93,8 @@ const MenuWrapper = styled.div `
   }
   @media (min-width: 1400px) {
     .bm-item-list {
-    margin-top: 15%;
+    /* margin-top: 15%; */
+    margin-top: 25%
     margin-left: 20%;
     }
   }
@@ -168,8 +170,8 @@ class Burger extends React.Component {
         <Menu right width={ '100%' }>
           <span className="ahoj"><Link to="/o_nas"><MenuItem>O Nás</MenuItem></Link></span>
           <span className="ahoj"><Link to="/sluzby"><MenuItem>Info Pre Firmy</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/ponuka_prace"><MenuItem>Ponuka Práce</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>
+          {/*<span className="ahoj"><Link to="/ponuka_prace"><MenuItem>Ponuka Práce</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>*/}
           <span className="ahoj"><Link to="/kontakt"><MenuItem>Kontakt</MenuItem></Link></span>
           <Kontakt>
             <span>Kontakt</span>
