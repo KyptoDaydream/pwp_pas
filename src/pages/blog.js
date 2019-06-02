@@ -24,7 +24,7 @@ class PageServices extends React.Component {
             {rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
           ]}>
           <meta charSet="utf-8" />
-          <title>PaS Services</title>
+          <title>PaS Services | blog</title>
           <meta name="description" content="agentura prace, agentura sluzieb"/>
           <meta name="keywords" content="Pas Services, Agentura PaS"/>
         </Helmet>
