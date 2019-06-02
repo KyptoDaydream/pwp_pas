@@ -6,6 +6,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import arrow from '../assets/arrow_expand.svg'
 import side_image from '../assets/side_image.jpg'
+import ButtonSmall from '../components/button_small'
 
 const ServicesWrapper = styled.div `
   width: 100%;
@@ -49,6 +50,9 @@ const ServicesMargin = styled.div`
   }
   .title_wrapper {
     position: relative;
+    .info_text {
+      padding-bottom: 60px;
+    }
   }
   .expanable_panel {
     -webkit-box-shadow: none;
@@ -60,6 +64,7 @@ const ServicesMargin = styled.div`
       border-bottom: 1px solid var(--light-gray);
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      padding-bottom: 20px;
     }
     &:before {
       display: none;
@@ -67,6 +72,7 @@ const ServicesMargin = styled.div`
     ul {
       margin: 0;
       padding: 0;
+      display: block;
       li {
         list-style: none;
         padding-left: 30px;
@@ -90,6 +96,9 @@ const ServicesMargin = styled.div`
     &:hover {
       color: var(--main-yellow);
     }
+  }
+  .expanable_content {
+    display: block;
   }
 `
 const SideImage = styled.div `
@@ -133,51 +142,62 @@ class Services extends React.Component {
             <Grid item xs={4} className="responsive_grid_1"></Grid>
             <Grid item xs={8} className="responsive_grid_2">
             <div className="title_wrapper">
-              <h1 className="service_name">agentura zamestnávania</h1>
-              <h1 className="services">V oblastiach logistiky, priemyslu, stavebníctva a administratíve</h1>
+              <h1 className="service_name">naše služby</h1>
+              <h1 className="services">Služby so starostlivostou o klienta 24/7</h1>
+              <p className="info_text">
+                  Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
+                  </p>
               </div>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Vyhľadáme pracovníkov podľa Vašich stanovených požiadaviek</p>
+                  <p>Personálna agentúra</p>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
+                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
                   <ul> 
-                    <li>Vyriešime nárazové alebo sezónne pracovné sily</li>
-                    <li>Zastrešíme problém výpadku Vášho kmeňového zamestnanca</li>
+                    <li>Kompletná personálna agenda a mzdový servis pre zamestnávateľov</li>
+                    <li>Vyhľadávanie pracovníkov pre firmy</li>
+                    <li>Vyhľadávania pracovných miest v oblastiach: logistika, priemysel, stavebníctvo a administratíva</li>
                   </ul>
+                  <ButtonSmall buttonText="viac o službe" buttonLink="/personalna_agentura" />
                 </ExpansionPanelDetails>
               </ExpansionPanel>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel2'} onChange={this.handleChange('panel2')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Kompletný mzdový servis je na nás</p>
+                  <p>Dopravca do 3.5t</p>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <p>
-                  Vaša spoločnosť nebude vykazovať zamestnancovi mesačnú mzdu, neodvádza za zamestnanca dane, neplatí sociálne a zdravotné poistenie
-                  </p>
+                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
+                  <ul> 
+                    <li>Vyzdvihnutie tovaru z Košického a Prešovského kraja</li>
+                    <li>Doprava v rámci SR a EÚ</li>
+                  </ul>
+                  <ButtonSmall buttonText="viac o službe" buttonLink="/dopravca" />
                 </ExpansionPanelDetails>
               </ExpansionPanel>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel3'} onChange={this.handleChange('panel3')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Znížime Vaše náklady spojených s vyhľadaním a umiestnením personálu a uľahčíme tento proces</p>
+                  <p>Upratovací servis</p>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
+                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
                   <ul> 
-                    <li>Náklady pri výbere, vyhľadávaní a zaškolení pracovníkov budú nulové.</li>
-                    <li>Zabezpečíme uzatvorenie pracovných zmlúv s pridelenými zamestnancami</li>
-                    <li>Prevezmeme všetky potrebné pracovno-právne úkony, personálnu a mzdovú agendu voči zamestnancovi</li>
-                    <li>Vždy zabezpečíme/pridelíme skúsené koordinátora </li>
+                    <li>Ponuka upratovacieho servisu</li>
+                    <li>Viacero typov upratovacích intervalov</li>
+                    <li>Maximálna snaha o efektívnosť a kvalitu vykonávaných prác</li>
+                    <li>Doplnková služba - údržba a kosenie vonkajších trávnatých plôch</li>
                   </ul>
+                  <ButtonSmall buttonText="viac o službe" buttonLink="/upratovaci_servis" />
                 </ExpansionPanelDetails>
               </ExpansionPanel>
-              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel4'} onChange={this.handleChange('panel4')}>
+              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel5'} onChange={this.handleChange('panel5')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Povolenie k činnosti</p>
+                <p>Zabezpečenie a organizovanie firemných akcií</p>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <p>
-                  Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
-                  </p>
+                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
+                <ul> 
+                  <li>Organizovanie outdorových a indorových eventov</li>
+                  <li>Catering priamo k vám do firmy alebo na Vami určené miesto</li>
+                </ul>
+                <ButtonSmall buttonText="viac o službe" buttonLink="/organizovanie_eventov" />
+                 
                 </ExpansionPanelDetails>
               </ExpansionPanel>
             </Grid>
@@ -186,53 +206,13 @@ class Services extends React.Component {
           <Grid container spacing={24}>
             <Grid item xs={4} className="responsive_grid_1"></Grid>
             <Grid item xs={8} className="responsive_grid_2">
-            <div className="title_wrapper">
-              <h1 className="service_name">servis pre firmy</h1>
-              <h1 className="services">Služby so starostlivosťou o klienta 24/7</h1>
+              <div className="title_wrapper">
+              <h1 className="service_name">komplexnosť a flexibilita</h1>
+              <h1 className="services">Sme partner, na ktorého sa môžete spoľahnúť</h1>
+              <p className="info_text">
+              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalita služieb poskytovaných našou firmou je zameraná na spokojnosť zákazníka a objednávateľa. Organizácia monitoruje potreby, ktoré sú odrazom našich služieb v oblasti logistiky.
+              </p>
               </div>
-              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel4'} onChange={this.handleChange('panel4')}>
-                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Dopravca</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <ul>
-                    <li>Vyzdvihnutie tovaru z Košického, Prešovského kraja</li>
-                    <li>Expresná doprava v rámci SR do 12h</li>
-                    <li>Expresná doprava v rámci EÚ do 24h</li>
-                    <li>Automatické poistenie tovaru</li>
-                    <li>Koordinácia dodania tovaru</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel5'} onChange={this.handleChange('panel5')}>
-                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Upratovacie služby</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <div>
-                  <p>Upratovacie služby  sú poskytované:</p>
-                  <ul>
-                    <li>v interiéri a exteriéri</li>
-                    <li>kancelárskych a skladových priestoroch</li>
-                    <li>kvalitnými prostriedkami a vyškoleným tímom</li>
-                  </ul>
-                  <p>Doplnková služba - údržba a kosenie vonkajších trávnatých plôch firmy</p>
-                  </div>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel6'} onChange={this.handleChange('panel6')}>
-                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Služby zamestnancom</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <ul>
-                    <li>Zabezpečenie firemných akcii, cateringov, voľnočasový program</li>
-                    <li>Kompletná organizácia firemnej akcie</li>
-                    <li>Externé zabezpečenie cateringu vo vašej firme</li>
-                    <li>Originálne nápady</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
             </Grid>
           </Grid>
           

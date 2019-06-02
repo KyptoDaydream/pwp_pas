@@ -14,7 +14,7 @@ const SliderWrapper = styled.div `
   top: 0;
   h2 {
     position: absolute;
-    bottom: 240px;
+    bottom: 290px;
     left: 140px;
     max-width: 400px;
     font-size: 24px;
@@ -25,6 +25,35 @@ const SliderWrapper = styled.div `
     width: 276px;
     bottom: 140px;
     left: 140px;
+  }
+  ul {
+    color: var(--main-white);
+    position: absolute;
+    width: 276px;
+    bottom: 140px;
+    left: 140px;
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        padding-left: 30px;
+        padding-bottom: 15px;
+        position: relative;
+        a {
+          color: var(--main-white);
+        }
+        a:hover {
+          color: var(--white);
+          text-decoration: underline;
+          text-decoration-color: var(--main-yellow);
+        }
+        &:before {
+          content: "•";
+          position: absolute;
+          left: 0px;
+          color: var(--main-yellow);
+        } 
+      }
   }
   @media (min-width: 1400px) {
     h2 {
@@ -40,7 +69,7 @@ const SliderWrapper = styled.div `
     h2 {
       position: relative;
       margin: 0 auto;
-      padding-top: 250px;
+      padding-top: 150px;
       left: auto;
       bottom: auto;
     }
@@ -50,7 +79,15 @@ const SliderWrapper = styled.div `
       left: auto;
       bottom: auto;
       width: 400px;
-  }
+    }
+    ul {
+      position: relative;
+      margin: 0 auto;
+      padding-top: 25px;
+      left: auto;
+      bottom: auto;
+      width: 400px;
+    }
   }
   @media (max-width: 400px) {
     h2 {
@@ -63,7 +100,14 @@ const SliderWrapper = styled.div `
       left: auto;
       bottom: auto;
       width: 270px;
-  }
+    }
+    ul {
+      margin: 0 auto;
+      left: auto;
+      bottom: auto;
+      width: 270px;
+      position: relative;
+    }
 `
 const Slide = styled.div `
   width: 100%;
@@ -107,11 +151,17 @@ class Slider extends React.Component  {
         <Slide/>
         <h2>Partner pre servis vašej firmy, na ktorého sa môžete spoľahnúť</h2>
 
-        <p className="flavour_text">
+        <ul>
+          <li><a href="/personalna_agentura">personálna agentúra</a></li>
+          <li><a href="/dopravca">dopravca do 3.5t</a></li>
+          <li><a href="/upratovaci_servis">upratovací servis</a></li>
+          <li><a href="/organizovanie_eventov">organizovanie eventov</a></li>
+        </ul>
+        {/*<p className="flavour_text">
         Sme agentúra v oblasti poskytovania komplexného servisu personalistiky, logistiky, cateringu a teambuildingu
-        </p>    
+        </p>*/}    
         <SlideContent>
-          <ButtonBig buttonText="spolupráca s firmami" buttonLink="/sluzby" />
+          <ButtonBig buttonText="Nezáväzná cenová ponuka" buttonLink="mail" />
           {/* <ButtonBig buttonText="ponuka práce" buttonLink="/ponuka_prace" /> */}
         </SlideContent>
       </SliderWrapper>

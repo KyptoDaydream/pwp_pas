@@ -122,14 +122,14 @@ class PageLayoutAbout extends React.Component {
             <Grid item xs={4} className="responsive_grid_1"></Grid>
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <div className="title_wrapper">
-              <h1 className="service_name">komplexnosť a flexibilita</h1>
+              <h1 className="service_name">o nás</h1>
               <h1 className="services">Partner, na ktorého sa môžete spoľahnúť</h1>
               </div>
               <p>
-              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoje služby v oblasti dočasného zamestnávania, logistike, komplexného firemného servisu a iných odvetviach.
+              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoje služby v oblasti persnonálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií.
             </p>
               <p>
-              Najdôležitejšími faktormi sú spokojnosť zákazníkov, odbornosť zamestnancov a kvalitné zázemie.
+              Najdôležitejšími faktormi sú spoľahlivý a flexibilný prístup k našim klientom, spokojnosť zákazníkov, odbornosť zamestnancov a kvalitné zázemie.
               </p>
               <Divider height="70px" />
               <p className="text_title">
@@ -146,31 +146,14 @@ class PageLayoutAbout extends React.Component {
               </ul>
               <Divider height="70px" />
               <p>
-              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalita služieb poskytovaných našou firmou je zameraná na spokojnosť zákazníka a objednávateľa. Organizácia monitoruje potreby, ktoré sú odrazom našich služieb v oblasti logistiky.                                                                                                                               
+              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalitami služieb poskytovaných našou firmou chceme dosiahnuť spokojnosť každého nášho klienta. Agentúra monitoruje potreby, ktoré sú odrazom našich služieb v rôznych oblastiach.                                                                                                                              
               </p>
               <p>
-              Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
+              Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientami a obchodnými partnermi, založený na dôvere a spokojnosti.
               </p>
               <p>
-              Prioritou našej spoločnosti je korektný, spoľahlivý a flexibilný prístup k našim klientom.
+              Tím PaS Services s.r.o
               </p>
-              <p>
-              Náš úspech je našim záväzkom a motiváciou napredovať a byť strategickým partnerom.
-              </p>
-              <Divider height="70px" />
-              <p className="text_title">
-                Čo získate spoluprácou s našou agentúrou? 
-              </p>
-              <ul>
-                <li>Zabezpečíme uzatvorenie pracovných zmlúv s pridelenými zamestnancami</li>
-                <li>Vyhľadáme pracovníkov podľa Vašich stanovených požiadaviek</li>
-                <li>Vyriešime nárazové alebo sezónne pracovné sily </li>
-                <li>Zastrešíme problém výpadku Vášho kmeňového zamestnanca</li>
-                <li>Znížime Úsporu Vašich nákladov spojených s vyhľadaním a umiestnením personálu</li>
-                <li>Náklady pri výbere, vyhľadávaní a zaškolení pracovníkov budú nulové</li>
-                <li>Vaša spoločnosť nebudee vykazovať zamestnancovi mesačnú mzdu., neodvádza za zamestnanca dane, neplatí sociálne a zdravotné poistenie.t.j. Kompletný mzdový servis je na nás</li>
-                <li>Prevezmeme všetky potrebné pracovno-právne úkony, personálnu a mzdovú agendu voči zamestnancovi</li>
-              </ul>
               <Divider height="70px" />
               <ButtonWrapper buttonText='Nase sluzby' buttonLink='/sluzby' />
             </Grid>

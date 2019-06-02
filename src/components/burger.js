@@ -169,9 +169,9 @@ class Burger extends React.Component {
       <MenuWrapper>
         <Menu right width={ '100%' }>
           <span className="ahoj"><Link to="/o_nas"><MenuItem>O Nás</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/sluzby"><MenuItem>Info Pre Firmy</MenuItem></Link></span>
-          {/*<span className="ahoj"><Link to="/ponuka_prace"><MenuItem>Ponuka Práce</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>*/}
+          <span className="ahoj"><Link to="/sluzby"><MenuItem>Naše služby</MenuItem></Link></span>
+          <span className="ahoj"><Link to="/ponuka_prace"><MenuItem>Ponuka Práce</MenuItem></Link></span>
+          {/*<span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>*/}
           <span className="ahoj"><Link to="/kontakt"><MenuItem>Kontakt</MenuItem></Link></span>
           <Kontakt>
             <span>Kontakt</span>

@@ -99,13 +99,12 @@ export default () => (
       ) {
         edges {
           node {
+            html
             frontmatter {
               path
-              title
-              thumbnail
               space
-              city
               position
+              mzda
               type
             }
           }
@@ -122,7 +121,7 @@ export default () => (
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <WorkTable data={data}/>
               <Divider height='50px' />
-              <ButtonWrapper buttonText='Kontakt' buttonLink='/asd/' />
+              <ButtonWrapper buttonText='Kontakt' buttonLink='/kontakt' />
             </Grid>
           </Grid>
         </ServicesMargin>

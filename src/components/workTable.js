@@ -23,12 +23,25 @@ const WorkWrapper = styled.div `
 const WorkMargin = styled.div`
   max-width: 940px;
   margin: 0 auto;
+  .position_title {
+    font-size: 15px;
+    padding-top: 20px;
+  }
+  .position {
+    vertical-align: top;
+    font-size: 15px;
+    padding-top: 20px;
+  }
+  .position_content p{
+    font-size: 13px;
+    color: var(--subtitle-gray);
+  }
 `
 
 let counter = 0;
-function createData(name, calories, fat) {
+function createData(name, html, fat) {
   counter += 1;
-  return { id: counter, name, calories, fat};
+  return { id: counter, name, html, fat};
 }
 
 function desc(a, b, orderBy) {
@@ -57,7 +70,6 @@ function getSorting(order, orderBy) {
 
 const rows = [
   { id: 'name', numeric: false, disablePadding: true, label: 'Pozícia' },
-  { id: 'calories', numeric: true, disablePadding: false, label: 'Mesto' },
   { id: 'fat', numeric: true, disablePadding: false, label: 'Voľné miesta' },
 ];
 
@@ -139,7 +151,7 @@ class EnhancedTable extends React.Component {
     const state_data = [];
     console.log(post_data);
     post_data.forEach(post => {
-      state_data.push(createData(post.node.frontmatter.position, post.node.frontmatter.city, post.node.frontmatter.space))
+      state_data.push(createData(post.node.frontmatter.position, post.node.html, post.node.frontmatter.space))
     });
     this.setState({data: state_data});
   }
@@ -228,11 +240,14 @@ class EnhancedTable extends React.Component {
                           key={n.id}
                           selected={isSelected}
                         >
-                          <TableCell component="th" scope="row">
+                          <TableCell className="position_title" component="th" scope="row">
                             {n.name}
+                            <div 
+                              className="position_content"
+                              dangerouslySetInnerHTML={{ __html: n.html }}
+                            />
                           </TableCell>
-                          <TableCell align="right">{n.calories}</TableCell>
-                          <TableCell align="right">{n.fat}</TableCell>
+                          <TableCell className="position" align="right">{n.fat}</TableCell>
                         </TableRow>
                       );
                     })}

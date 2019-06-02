@@ -7,7 +7,7 @@ const ButtonBig = styled.div`
   background-size: 200% 100%;
   transition: 0.8s;
   height: 75px;
-  width: 290px;
+  width: 310px;
   text-align: center;
   margin-bottom: 25px;
   cursor: pointer;
@@ -49,7 +49,8 @@ const ButtonBig = styled.div`
   }
 `
 export default (props) => (
-  <a href={props.buttonLink}>
+
+  <a href={props.buttonLink === 'mail' ? 'mailto:agenturapas@agenturapas.sk' : props.buttonLink}>
     <ButtonBig>
       <span>{props.buttonText}</span>
     </ButtonBig>

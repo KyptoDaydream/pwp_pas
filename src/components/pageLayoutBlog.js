@@ -28,9 +28,6 @@ export default () => (
               path
               title
               thumbnail
-              space
-              city
-              position
               type
             }
           }

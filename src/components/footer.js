@@ -91,15 +91,19 @@ class Footer extends React.Component {
             </Grid>
             <Grid item xs={3} className="responsive_footer">
               <Link to="/o_nas" className="classic_link footer_menu">O Nas</Link>
-              <Link to="/sluzby" className="classic_link footer_menu">Info Pre Firmy</Link>
-              {/*<Link to="/ponuka_prace" className="classic_link footer_menu">Pracovne Pozicie</Link>
-              <Link to="/blog" className="classic_link footer_menu">Blog</Link>*/}
+              <Link to="/personalna_agentura" className="classic_link footer_menu">Personálna agentúra</Link>
+              <Link to="/dopravca" className="classic_link footer_menu">Dopravca do 3.5t</Link>
+              <Link to="/upratovaci_servis" className="classic_link footer_menu">Upratovací servis</Link>
+              <Link to="/organizovanie_eventov" className="classic_link footer_menu">Organizovanie Eventov</Link>
+              <Link to="/ponuka_prace" className="classic_link footer_menu">Pracovne Pozicie</Link>
+              <Link to="/gdpr" className="classic_link footer_menu">GDPR</Link>
+              {/*<Link to="/blog" className="classic_link footer_menu">Blog</Link>*/}
               <Link to="/kontakt" className="classic_link footer_menu">Kontakt</Link>
             </Grid>
             <Grid item xs={3} className="responsive_footer">
               <p className="footer_kontakt">tel.: 0917 237 471</p>
               <p>adresa.: moldavska cesta 43/A</p>
-              <p>mail.: <a className="classic_link" href="mailto:pas.services.ke@gmail.com">pas.services.ke@gmail.com</a></p>
+              <p>mail.: <a className="classic_link" href="mailto:agenturapas@agenturapas.sk">agenturapas@agenturapas.sk</a></p>
                 
               <a href="https://www.facebook.com/passervices.sk/" rel="noopener noreferrer" target="_blank"><Icon className='facebook' /></a>
               <a href="mailto:pas.services.ke@gmail.com"><Icon className='mail' /></a>

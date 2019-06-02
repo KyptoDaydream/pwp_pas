@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import side_image from '../assets/side_image_4.jpg'
 import Divider from './divider'
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import ButtonWrapper from '../components/buttonWrapper'
 
 const ServicesWrapper = styled.div `
   width: 100%;
@@ -54,6 +55,11 @@ const ServicesMargin = styled.div`
         } 
       }
     }
+
+  .text_title {
+    font-weight: 900;
+    color: var(--main-yellow);
+  }
   .text_wrapper {
     position: relative;
   }
@@ -94,10 +100,34 @@ class PageLayoutAbout extends React.Component {
               Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trh svoju kvalitu v logistike, doprave a špedícii, ale taktiež aj iných odvetviach.                                               
               </p>
               <Divider height="70px" />
+              <ButtonWrapper buttonText='Napíšte Nám' buttonLink='mail' />
+              <Divider height="10px" />
+              <p className="text_title">
+                Firemné údaje
+              </p>
               <ul>
-                <li>Moldavska trieda 43/A</li>
-                <li>0917 237 471</li>
-                <li>pas.services.ke@gmail.com</li>
+                <li>názov spoločnosti: PaS Services spol. s r. o.</li>
+                <li>sídlo spoločnosti: Starozagorská 41, 040 23 Košice</li>
+                <li>konateľ: Ing. Milan Kyjovský</li>
+                <li>IČO: 50750178</li>
+                <li>DIČ: 2120458901</li>
+                <li>IČ DPH:SK2120458901</li>
+                <li>zapísaná v obchodnom registri Okresného súdu Košice I, oddiel Sro, vložka číslo: 40907/V</li>
+              </ul>
+              <Divider height="70px" />
+              <p className="text_title">
+                Kontakt
+              </p>
+              <ul>
+                <li>adresa agentúry a kancelárie prvého kontaktu: Moldavská 43/A, 1. poschodie</li>
+                <li>e-mail: <a href="mailto:agenturapas@agenturapas.sk">agenturapas@agenturapas.sk</a></li>
+                <li>telefón/mobil: +421-(0)917-237-471</li>
+              </ul>
+              <Divider height="30px" />
+              <ul>
+                <li>Kyjovský: <a href="mailto:kyjovsky@agenturapas.sk">kyjovsky@agenturapas.sk</a></li>
+                <li>Ballok: <a href="mailto:ballok@agenturapas.sk">ballok@agenturapas.sk</a></li>
+                <li>Matis: <a href="mailto:matis@agenturapas.sk">matis@agenturapas.sk</a></li>
               </ul>
               <Divider height="70px" />
               <div style={{position: 'relative', height: '300px'}}>

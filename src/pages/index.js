@@ -4,14 +4,14 @@ import styled from "styled-components"
 import Header from "../components/header"
 import Slider from "../components/slider"
 // import BlogShowcase from "../components/blogshowcase"
-// import WorkTable from '../components/workTable';
+import WorkTableHome from '../components/workTableHome';
 import Services from '../components/services'
 import Footer from '../components/footer'
 import "../styles/global.css"
 import stripe_bg from "../assets/stripe_bg.png"
 import Divider from '../components/divider'
 import ButtonWrapperDouble from '../components/buttonWrapperDouble'
-// import ButtonWrapper from '../components/buttonWrapper'
+import ButtonWrapper from '../components/buttonWrapper'
 import Pros from '../components/pros'
 import { Helmet } from "react-helmet"
 import favicon from "../assets/favicon.png"
@@ -43,8 +43,10 @@ class Index extends React.Component {
         <Divider height="100px" />
         <Services/>
         <ButtonWrapperDouble buttonLink="/o_nas" buttonText='viac o nás' buttonLink2="/sluzby" buttonText2='viac o našich službách' />
-        {/*<WorkTable data={data}/>
-        <BlogShowcase data={data}/>
+        <WorkTableHome data={data}/>
+        <Divider height="70px" />
+        <ButtonWrapper buttonLink="/ponuka_prace" buttonText='podrobnejšie ponuky' />
+        {/* <BlogShowcase data={data}/>
         <ButtonWrapper buttonLink="/blog" buttonText='všetky články' />*/}
         <Footer />
       </PageWrapper>
@@ -67,8 +69,8 @@ export const pageQuery = graphql`
             title
             thumbnail
             space
-            city
             position
+            mzda
             type
           }
         }
