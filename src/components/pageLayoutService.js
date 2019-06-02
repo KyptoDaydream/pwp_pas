@@ -161,7 +161,7 @@ class PageLayout extends React.Component {
                 <li>Vyhľadávania pracovných miest v oblastiach: logistika, priemysel, stavebníctvo a administratíva</li>
               </ul>
               <Divider height="25px" />
-              <ButtonWrapper buttonText='Personálna agentúra' buttonLink='/sluzby' />
+              <ButtonWrapper buttonText='Personálna agentúra' buttonLink='/personalna_agentura' />
               <Divider height="40px" />
               <p className="text_title">
                 Dopravca do 3.5t
@@ -171,7 +171,7 @@ class PageLayout extends React.Component {
                 <li>Doprava v rámci SR a EÚ</li>
               </ul>
               <Divider height="25px" />
-              <ButtonWrapper buttonText='Dopravca do 3.5t' buttonLink='/sluzby' />
+              <ButtonWrapper buttonText='Dopravca do 3.5t' buttonLink='/dopravca' />
               <Divider height="40px" />
               <p className="text_title">
                 Upratovací servis 
@@ -183,7 +183,7 @@ class PageLayout extends React.Component {
                 <li>Doplnková služba - údržba a kosenie vonkajších trávnatých plôch</li>
               </ul>
               <Divider height="25px" />
-              <ButtonWrapper buttonText='Upratovací servis' buttonLink='/sluzby' />
+              <ButtonWrapper buttonText='Upratovací servis' buttonLink='/upratovaci_servis' />
               <Divider height="40px" />
               <p className="text_title">
                 Zabezpečenie a organizovanie firemných akcií
@@ -193,7 +193,7 @@ class PageLayout extends React.Component {
                 <li>Catering priamo k vám do firmy alebo na Vami určené miesto</li>
               </ul>
               <Divider height="25px" />
-              <ButtonWrapper buttonText='Organizovanie eventov' buttonLink='/sluzby' />
+              <ButtonWrapper buttonText='Organizovanie eventov' buttonLink='/organizovanie_eventov' />
               <Divider height="40px" />
               </div>
             </Grid>
