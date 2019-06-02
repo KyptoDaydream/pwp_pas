@@ -1,7 +1,7 @@
 ---
 layout: blog
 type: pozicie
-path: Práca v sklade Košice – brigáda
+path: /kosice/
 position: Práca v sklade Košice – brigáda
 city: '0'
 space: '0'

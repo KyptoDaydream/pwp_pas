@@ -1,7 +1,7 @@
 ---
 layout: blog
 type: pozicie
-path: 'Kuriér v medzinárodnej prepravnej spoločnosti – TPP '
+path: /kurier/
 position: 'Kuriér v medzinárodnej prepravnej spoločnosti – TPP '
 city: '0'
 space: '0'

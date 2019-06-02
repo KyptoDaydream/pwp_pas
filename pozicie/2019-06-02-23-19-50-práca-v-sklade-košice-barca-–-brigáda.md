@@ -1,7 +1,7 @@
 ---
 layout: blog
 type: pozicie
-path: Práca v sklade  -Košice-Barca – brigáda
+path: /barca/
 position: Práca v sklade  -Košice-Barca – brigáda
 city: '0'
 space: '0'

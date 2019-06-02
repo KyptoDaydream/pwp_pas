@@ -1,7 +1,7 @@
 ---
 layout: blog
 type: pozicie
-path: Pomocný skladník v stavebníctve – brigáda
+path: /skladnik/
 position: Pomocný skladník v stavebníctve – brigáda
 city: '0'
 space: '0'
