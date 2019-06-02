@@ -32,9 +32,15 @@ const WorkMargin = styled.div`
     font-size: 15px;
     padding-top: 20px;
   }
-  .position_content p{
+  .position_content p, .position_content ul li{
     font-size: 13px;
     color: var(--subtitle-gray);
+  }
+  .position_content ul {
+    padding-top: 20px;
+  }
+  .position_content ul li {
+    padding-bottom: 5px;
   }
 `
 
