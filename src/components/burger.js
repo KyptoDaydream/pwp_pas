@@ -177,9 +177,9 @@ class Burger extends React.Component {
             <span>Kontakt</span>
             <p>moldavska cesta 43/A</p>
             <p>0917 237 471</p>
-            <p><a className="classic_link" href="mailto:pas.services.ke@gmail.com">pas.services.ke@gmail.com</a></p>
+            <p><a className="classic_link" href="mailto:agenturapas@agenturapas.sk">agenturapas@agenturapas.sk</a></p>
             <a href="https://www.facebook.com/passervices.sk/" rel="noopener noreferrer" target="_blank"><Icon className='facebook' /></a>
-            <a href="mailto:pas.services.ke@gmail.com"><Icon className='mail' /></a>
+            <a href="mailto:agenturapas@agenturapas.sk"><Icon className='mail' /></a>
             <a href="https://www.google.com/maps/place/Moldavsk%C3%A1+cesta+43,+040+11+Ko%C5%A1ice/@48.7008844,21.2371226,17z/data=!4m5!3m4!1s0x473ee01a682c3771:0xa87216d493a8ffd3!8m2!3d48.7008703!4d21.2388607" rel="noopener noreferrer" target="_blank"><Icon className='place' /></a>
           </Kontakt>
         </Menu>
