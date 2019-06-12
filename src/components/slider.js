@@ -41,6 +41,7 @@ const SliderWrapper = styled.div `
         position: relative;
         a {
           color: var(--main-white);
+          font-weight: bold;
         }
         a:hover {
           color: var(--white);

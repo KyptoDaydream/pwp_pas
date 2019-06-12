@@ -175,7 +175,7 @@ class PageLayoutAbout extends React.Component {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
                   <ul> 
-                    <li>Nulové náklady pri vyhľadávaná pracovníkov</li>
+                    <li>Nulové náklady pri vyhľadávaní pracovníkov</li>
                     <li>Vyriešime nárazové alebo sezónne pracovné sily</li>
                     <li>Zastrešíme problém výpadku Vášho kmeňového zamestnanca</li>
                     <li>Zníženie úspor vašich nákladov pri umiestnení personálu</li>

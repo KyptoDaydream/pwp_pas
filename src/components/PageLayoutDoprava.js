@@ -132,7 +132,7 @@ class PageLayoutDoprava extends React.Component {
               <h1 className="service_name">dopravca</h1>
               <h1 className="services">Váš partner v doprave do 3.5t</h1>
               <ul> 
-                    <li>Dopravné služby pre kurierské spoločnosti</li>
+                    <li>Dopravné služby pre kuriérske spoločnosti</li>
                     <li>Starostlivosť o pridelený rajón</li>
                     <li>Doprava tovaru na základe pridelených objednávok</li>
                     <li>Vyzdvihnutie tovaru z Košického a Prešovského kraja</li>

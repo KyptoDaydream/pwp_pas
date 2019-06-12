@@ -126,7 +126,7 @@ class PageLayoutAbout extends React.Component {
               <h1 className="services">Partner, na ktorého sa môžete spoľahnúť</h1>
               </div>
               <p>
-              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoje služby v oblasti persnonálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií.
+              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoje služby v oblasti personálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií.
             </p>
               <p>
               Najdôležitejšími faktormi sú spoľahlivý a flexibilný prístup k našim klientom, spokojnosť zákazníkov, odbornosť zamestnancov a kvalitné zázemie.
@@ -146,7 +146,7 @@ class PageLayoutAbout extends React.Component {
               </ul>
               <Divider height="70px" />
               <p>
-              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalitami služieb poskytovaných našou firmou chceme dosiahnuť spokojnosť každého nášho klienta. Agentúra monitoruje potreby, ktoré sú odrazom našich služieb v rôznych oblastiach.                                                                                                                              
+              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalita služieb poskytovaných našou firmou je zameraná na spokojnosť zákazníka a objednávateľa. Organizácia monitoruje potreby, ktoré sú odrazom našich služieb v oblasti personálnych služieb, dopravy do 3.5t, upratovacieho servisu a organizovania eventov.                                                                                                                            
               </p>
               <p>
               Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientami a obchodnými partnermi, založený na dôvere a spokojnosti.

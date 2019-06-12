@@ -210,7 +210,7 @@ class Services extends React.Component {
               <h1 className="service_name">komplexnosť a flexibilita</h1>
               <h1 className="services">Sme partner, na ktorého sa môžete spoľahnúť</h1>
               <p className="info_text">
-              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalita služieb poskytovaných našou firmou je zameraná na spokojnosť zákazníka a objednávateľa. Organizácia monitoruje potreby, ktoré sú odrazom našich služieb v oblasti logistiky.
+              Pracovníci spoločnosti PaS Services s.r.o. tvoria najdôležitejšie prepojenie medzi viacerými štruktúrami spoločnosti. Kvalita služieb poskytovaných našou firmou je zameraná na spokojnosť zákazníka a objednávateľa. Organizácia monitoruje potreby, ktoré sú odrazom našich služieb v oblasti personálnych služieb, dopravy do 3.5t, upratovacieho servisu a organizovania eventov.
               </p>
               </div>
             </Grid>

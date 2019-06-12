@@ -29,7 +29,7 @@ class PageAbout extends React.Component {
           <meta name="keywords" content="Pas Services, Agentura PaS"/>
         </Helmet>
         <Header />
-        <TitleImage componentClass="contact" title="Kde nás nájdete"/>
+        <TitleImage componentClass="contact" title="KONTAKT"/>
         <Divider height="100px" />
         <PageLayoutContact />
         <Divider height="100px" />

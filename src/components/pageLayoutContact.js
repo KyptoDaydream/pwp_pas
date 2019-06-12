@@ -97,7 +97,7 @@ class PageLayoutAbout extends React.Component {
               <h1 className="services">Všetky potrebné informácie pre kontakt s nami</h1>
               </div>
               <p>
-              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trh svoju kvalitu v logistike, doprave a špedícii, ale taktiež aj iných odvetviach.                                               
+              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoju kvalitu v personálnych službách, doprave, upratovacom servise a organizovaní eventov.                                              
               </p>
               <Divider height="70px" />
               <ButtonWrapper buttonText='Napíšte Nám' buttonLink='mail' />
@@ -121,13 +121,7 @@ class PageLayoutAbout extends React.Component {
               <ul>
                 <li>adresa agentúry a kancelárie prvého kontaktu: Moldavská 43/A, 1. poschodie</li>
                 <li>e-mail: <a href="mailto:agenturapas@agenturapas.sk">agenturapas@agenturapas.sk</a></li>
-                <li>telefón/mobil: +421-(0)917-237-471</li>
-              </ul>
-              <Divider height="30px" />
-              <ul>
-                <li>Kyjovský: <a href="mailto:kyjovsky@agenturapas.sk">kyjovsky@agenturapas.sk</a></li>
-                <li>Ballok: <a href="mailto:ballok@agenturapas.sk">ballok@agenturapas.sk</a></li>
-                <li>Matis: <a href="mailto:matis@agenturapas.sk">matis@agenturapas.sk</a></li>
+                <li>telefón/mobil: +421-(0)917 237 471</li>
               </ul>
               <Divider height="70px" />
               <div style={{position: 'relative', height: '300px'}}>

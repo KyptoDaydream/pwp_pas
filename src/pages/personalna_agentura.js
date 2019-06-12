@@ -26,7 +26,7 @@ class PageAgency extends React.Component {
           <meta name="keywords" content="Pas Services, Agentura PaS"/>
         </Helmet>
         <Header />
-        <TitleImage componentClass="about_us" title="Kompletná personálna agenda"/>
+        <TitleImage componentClass="about_us" title="PERSONÁLNA AGENTÚRA"/>
         <Divider height="100px" />
         <PageLayoutPersonalnaAgentura />
         <Divider height="100px" />
