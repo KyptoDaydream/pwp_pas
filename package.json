@@ -15,7 +15,7 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.3.5",
+    "gatsby": "^2.11.6",
     "gatsby-plugin-material-ui": "^1.2.4",
     "gatsby-plugin-netlify-cms": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.0.12",
