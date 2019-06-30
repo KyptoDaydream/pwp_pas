@@ -2,7 +2,7 @@
 layout: blog
 type: pozicie
 path: /barca/
-position: Práca v sklade  -Košice-Barca – brigáda
+position: Práca v sklade - Košice-Barca - brigáda
 city: '0'
 space: '0'
 mzda: 3.50€/hod. v čistom
