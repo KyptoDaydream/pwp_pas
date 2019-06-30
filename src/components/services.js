@@ -7,6 +7,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import arrow from '../assets/arrow_expand.svg'
 import side_image from '../assets/side_image.jpg'
 import ButtonSmall from '../components/button_small'
+import Divider from './divider'
 
 const ServicesWrapper = styled.div `
   width: 100%;
@@ -144,9 +145,7 @@ class Services extends React.Component {
             <div className="title_wrapper">
               <h1 className="service_name">naše služby</h1>
               <h1 className="services">Služby so starostlivostou o klienta 24/7</h1>
-              <p className="info_text">
-                  Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
-                  </p>
+              <Divider height="70px" />
               </div>
               <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
                 <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>

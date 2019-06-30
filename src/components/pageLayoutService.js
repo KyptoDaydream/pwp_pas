@@ -148,9 +148,6 @@ class PageLayout extends React.Component {
             <div className="title_wrapper">
               <h1 className="service_name">naše služby</h1>
               <h1 className="services">Služby so starostlivostou o klienta 24/7</h1>
-              <p className="info_text">
-                Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
-              </p>
               <Divider height="70px" />
               <p className="text_title">
                 Personálna agentúra 

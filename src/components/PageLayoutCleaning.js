@@ -216,12 +216,6 @@ class PageLayoutAbout extends React.Component {
                   </ul>
                 </ExpansionPanelDetails>
               </ExpansionPanel>
-              <Divider height="40px" />
-              <div className="title_wrapper">
-                <p className="info_text">
-                  Všetky služby sú poskytované na základe povolenia sprostredkovania zamestnania, vydané Ústredím Práce Sociálnych vecí a Rodiny v Bratislave. Našim hlavným cieľom je poskytovať kvalitné služby a tak budovať dlhodobý partnerský vzťah s klientom a obchodnými partnermi založený na dôvere a spokojnosti.
-                </p>
-              </div>
               <Divider height="70px" />
               <ButtonWrapper buttonText='Nezáväzná cenová ponuka' buttonLink='mail' />
             </Grid>
