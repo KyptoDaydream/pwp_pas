@@ -162,7 +162,7 @@ class Slider extends React.Component  {
         Sme agentúra v oblasti poskytovania komplexného servisu personalistiky, logistiky, cateringu a teambuildingu
         </p>*/}    
         <SlideContent>
-          <ButtonBig buttonText="Nezáväzná cenová ponuka" buttonLink="mail" />
+          <ButtonBig buttonText="Nezáväzná cenová ponuka" buttonLink="https://www.agenturapas.sk/kontakt" />
           {/* <ButtonBig buttonText="ponuka práce" buttonLink="/ponuka_prace" /> */}
         </SlideContent>
       </SliderWrapper>

@@ -4,7 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import side_image from '../assets/side_image_4.jpg'
 import Divider from './divider'
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
-import ButtonWrapper from '../components/buttonWrapper'
+import ButtonWrapper from './buttonWrapper'
+import arrow from '../assets/arrow_white.svg'
 
 const ServicesWrapper = styled.div `
   width: 100%;
@@ -32,6 +33,95 @@ const ServicesWrapper = styled.div `
     .responsive_grid_2 {
       flex-basis: 100%;
       max-width: 100%;
+    }
+  }
+  form input {
+    width: 100%;
+    line-height: 40px;
+    margin-top: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+  }
+  form .button {
+    text-align: center;
+  }
+  form textarea {
+    border: 0px;
+    line-height: 20px;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    max-height: 220px;
+    height: 220px;
+    max-width: 100%;
+    resize: none;
+    width: 100%;
+    min-width: 100%;
+    background: #f8f8f8;
+    border-bottom: 1px solid #cccccc;
+  }
+  form .label_1 {
+    margin-right: 70px;
+  }
+  form .radio_wrapper {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-left: 15px;
+  }
+  form input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    padding-right: 20px;
+    margin-right: 10px;
+  }
+  form button {
+    background: linear-gradient(90deg,var(--main-pink) 0%,var(--main-yellow) 50%, var(--main-yellow) 100%);
+    background-size: 200% 100%;
+    transition: 0.8s;
+    height: 75px;
+    width: 310px;
+    text-align: center;
+    margin-bottom: 25px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 900;
+    margin-right: 25px;
+    margin-left: 25px;
+    span {
+      color: var(--main-white);
+      text-decoration: none !important;
+      line-height: 75px;
+      transition: 0.8s;
+      margin-left: 33px;
+      font-size: 14px;
+      :after {
+        transition: 0.8s;
+        content: '';
+        width: 13px;
+        height: 13px;
+        opacity: 1;
+        background: url(${arrow});
+        background-size: cover;
+        background-repeat: none;
+        margin-left: 20px;
+        background-size: cover;
+        display: inline-block;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      transition: 0.8s;
+      background: linear-gradient(90deg,var(--main-pink) 0%,var(--main-yellow) 50%, var(--main-yellow) 100%);
+      background-size: 200% 100%;
+      background-position: right;
+      span{
+        margin-left: 0;
+      }
+      span:after {
+        opacity: 1;
+      }
     }
   }
 `
@@ -100,8 +190,33 @@ class PageLayoutAbout extends React.Component {
               Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoju kvalitu v personálnych službách, doprave, upratovacom servise a organizovaní eventov.                                              
               </p>
               <Divider height="70px" />
-              <ButtonWrapper buttonText='Napíšte Nám' buttonLink='mail' />
-              <Divider height="10px" />
+              <p className="text_title">
+                Kontaktný formulár
+              </p>
+              <form method="post" action="https://www.briskforms.com/go/715a785ffead4b4dbb21f0a42a2a7896">
+                <div className="radio_wrapper">
+                  <input type="radio" id="contactChoice1"
+                  name="predmet" value="Reakcia na ponuku práce" checked/>
+                  <label className="label_1" for="contactChoice1">Reakcia na ponuku práce</label>
+                  <input type="radio" id="contactChoice2"
+                  name="predmet" value="Vypracovanie cenovej ponuky" />
+                  <label for="contactChoice2">Vypracovanie cenovej ponuky</label>
+                </div>
+                <div>
+                  <input placeholder="Meno" type="text" id="name" name="Meno" required/>
+                </div>
+                <div>
+                  <input placeholder="Email" type="email" id="mail" name="Email" required/>
+                </div>
+                <div>
+                  <textarea placeholder="Správa" id="msg" name="Správa" required></textarea>
+                </div>
+                <Divider height="30px" />
+                  <div class="button">
+                    <button type="submit"><span>Odoslať Formulár</span></button>
+                  </div>
+              </form>
+              <Divider height="70px" />
               <p className="text_title">
                 Firemné údaje
               </p>
@@ -137,6 +252,8 @@ class PageLayoutAbout extends React.Component {
                   position={{lat: 48.700554, lng: 21.238518}} />
             </Map>
             </div>
+            <Divider height="70px" />
+              <ButtonWrapper buttonText='Napíšte Nám' buttonLink='mail' />
             </Grid>
           </Grid>
         </ServicesMargin>

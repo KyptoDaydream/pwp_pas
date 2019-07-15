@@ -33,8 +33,8 @@ class Index extends React.Component {
           ]}>
           <meta charSet="utf-8" />
           <title>PaS Services</title>
-          <meta name="description" content="agentura prace, agentura sluzieb"/>
-          <meta name="keywords" content="Pas Services, Agentura PaS"/>
+          <meta name="description" content="Spoločnosť PaS Services s.r.o. je firma, ktorá ponúka na trhu svoje služby v oblasti personálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií.b"/>
+          <meta name="keywords" content="pracovná agentúra, personálna agentúra, dočasné zamestnanie, agentúra dočasného zamestnávania, služby, preprava, doprava, dopravca do 3,5t, upratovací servis, organizovanie eventov, organizovanie akcií, firemné akcie, adrenalínové aktivity, catering, Agentúra PaS, Pas Services, Košice, čistenie priemyselných objektov, čistenie technologických zariadení, čistenie konštrukcií, tepovanie kobercov, upratovanie sociálnych zariadení, kosenie trávy"/>
         </Helmet>
         <Header />
         <Slider />

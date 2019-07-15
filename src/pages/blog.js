@@ -25,7 +25,7 @@ class PageServices extends React.Component {
           ]}>
           <meta charSet="utf-8" />
           <title>PaS Services | blog</title>
-          <meta name="description" content="agentura prace, agentura sluzieb"/>
+          <meta name="description" content="Spoločnosť PaS Services s.r.o. je firma, ktorá ponúka na trhu svoje služby v oblasti personálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií."/>
           <meta name="keywords" content="Pas Services, Agentura PaS"/>
         </Helmet>
         <Header />
