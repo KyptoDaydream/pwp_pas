@@ -11,6 +11,13 @@ const ServicesWrapper = styled.div `
   width: 100%;
   padding: 50px;
   position: relative;
+  .poucenie {
+    color: var(--text-gray);
+  }
+  .poucenie:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--main-yellow);
+  }
   :before {
     content: "";
     position: absolute;
@@ -43,6 +50,10 @@ const ServicesWrapper = styled.div `
     font-size: 14px;
     border: 0;
     border-bottom: 1px solid #cccccc;
+  }
+  form input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
   }
   form .button {
     text-align: center;
@@ -211,7 +222,11 @@ class PageLayoutAbout extends React.Component {
                 <div>
                   <textarea placeholder="Správa" id="msg" name="Správa" required></textarea>
                 </div>
-                <Divider height="30px" />
+                <div>
+                  <input type="checkbox" name="q" id="a-0" required autofocus />
+                  <label for="a-0">Súhlasím s odoslaním údajov. (<a className="poucenie" href="https://www.agenturapas.sk/gdpr">poučenie</a>)</label>
+                </div>
+                <Divider height="40px" />
                   <div class="button">
                     <button type="submit"><span>Odoslať Formulár</span></button>
                   </div>
@@ -235,7 +250,7 @@ class PageLayoutAbout extends React.Component {
               </p>
               <ul>
                 <li>adresa agentúry a kancelárie prvého kontaktu: Moldavská 43/A, 1. poschodie</li>
-                <li>e-mail: <a href="mailto:agenturapas@agenturapas.sk">agenturapas@agenturapas.sk</a></li>
+                <li>e-mail: <a href="mailto:agenturapas@agenturapas.sk" target="_blank" rel="noopener noreferrer">agenturapas@agenturapas.sk</a></li>
                 <li>telefón/mobil: +421-(0)917 237 471</li>
               </ul>
               <Divider height="70px" />

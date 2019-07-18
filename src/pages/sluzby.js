@@ -29,7 +29,7 @@ class PageServices extends React.Component {
           <meta name="keywords" content="Pas Services, Agentura PaS"/>
         </Helmet>
         <Header />
-        <TitleImage componentClass="services" title="Profesionálny prístup k vašim potrebám firmy"/>
+        <TitleImage componentClass="services" title="Profesionálny prístup k potrebám vašej firmy"/>
         <Divider height="100px" />
         <PageLayoutService />
         <Divider height="100px" />

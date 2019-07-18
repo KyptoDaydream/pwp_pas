@@ -155,7 +155,7 @@ class PageLayoutAbout extends React.Component {
               Tím PaS Services s.r.o
               </p>
               <Divider height="70px" />
-              <ButtonWrapper buttonText='Nase sluzby' buttonLink='/sluzby' />
+              <ButtonWrapper buttonText='Naše služby' buttonLink='/sluzby' />
             </Grid>
           </Grid>
         </ServicesMargin>

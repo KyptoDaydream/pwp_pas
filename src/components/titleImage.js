@@ -42,7 +42,7 @@ const Slide = styled.div `
 const SlideContent = styled.div`
   bottom: 100px;
   left: 20%;
-  max-width: 500px;
+  max-width: ${props => props.width};
   position: absolute;
 `
 class titleImage extends React.Component  {
@@ -53,11 +53,11 @@ class titleImage extends React.Component  {
   
 
   render() {
-    
+    const width = this.props.width ? this.props.width : '500px';
     return (
       <SliderWrapper className={this.props.componentClass}>
         <Slide/>
-        <SlideContent>
+        <SlideContent width={width}>
           <h2>{this.props.title}</h2>
         </SlideContent>
       </SliderWrapper>

@@ -26,7 +26,7 @@ class PageAbout extends React.Component {
           <meta name="keywords" content="Pas Services, Agentura PaS"/>
         </Helmet>
         <Header />
-        <TitleImage componentClass="about_us" title="Zabezpečenie dopravy v rámci SR a EÚ"/>
+        <TitleImage width="420px" componentClass="about_us" title="Zabezpečenie dopravy v rámci SR a EÚ"/>
         <Divider height="100px" />
         <PageLayoutDoprava />
         <Divider height="100px" />
