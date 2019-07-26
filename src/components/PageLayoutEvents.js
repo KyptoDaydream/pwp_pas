@@ -160,7 +160,7 @@ class PageLayoutAbout extends React.Component {
                   <ul> 
                     <li>Firmené akcie po celý rok</li>
                     <li>Koncoročné večierky</li>
-                    <li>Vianočné - novoročné</li>
+                    <li>Vianočné - novoročné akcie</li>
                     <li>Športové a adrenalínové aktivity</li>
                   </ul>
                 </ExpansionPanelDetails>

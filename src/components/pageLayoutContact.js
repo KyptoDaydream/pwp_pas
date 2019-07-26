@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from '@material-ui/core/Grid';
-import side_image from '../assets/side_image_4.jpg'
-import Divider from './divider'
-import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
-import ButtonWrapper from './buttonWrapper'
-import arrow from '../assets/arrow_white.svg'
+import Grid from "@material-ui/core/Grid"
+import side_image from "../assets/side_image_4.jpg"
+import Divider from "./divider"
+import { Map, Marker, GoogleApiWrapper } from "google-maps-react"
+import ButtonWrapper from "./buttonWrapper"
+import arrow from "../assets/arrow_white.svg"
 
-const ServicesWrapper = styled.div `
+const ServicesWrapper = styled.div`
   width: 100%;
   padding: 50px;
   position: relative;
@@ -26,8 +26,8 @@ const ServicesWrapper = styled.div `
     bottom: 0;
     right: 15px;
     background-color: #fff;
-    -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
-    box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
   }
   @media (max-width: 980px) {
     :before {
@@ -88,7 +88,12 @@ const ServicesWrapper = styled.div `
     margin-right: 10px;
   }
   form button {
-    background: linear-gradient(90deg,var(--main-pink) 0%,var(--main-yellow) 50%, var(--main-yellow) 100%);
+    background: linear-gradient(
+      90deg,
+      var(--main-pink) 0%,
+      var(--main-yellow) 50%,
+      var(--main-yellow) 100%
+    );
     background-size: 200% 100%;
     transition: 0.8s;
     height: 75px;
@@ -109,7 +114,7 @@ const ServicesWrapper = styled.div `
       font-size: 14px;
       :after {
         transition: 0.8s;
-        content: '';
+        content: "";
         width: 13px;
         height: 13px;
         opacity: 1;
@@ -124,10 +129,15 @@ const ServicesWrapper = styled.div `
     }
     &:hover {
       transition: 0.8s;
-      background: linear-gradient(90deg,var(--main-pink) 0%,var(--main-yellow) 50%, var(--main-yellow) 100%);
+      background: linear-gradient(
+        90deg,
+        var(--main-pink) 0%,
+        var(--main-yellow) 50%,
+        var(--main-yellow) 100%
+      );
       background-size: 200% 100%;
       background-position: right;
-      span{
+      span {
         margin-left: 0;
       }
       span:after {
@@ -141,21 +151,21 @@ const ServicesMargin = styled.div`
   margin: 0 auto;
   z-index: 999;
   ul {
-      margin: 0;
-      padding: 0;
-      li {
-        list-style: none;
-        padding-left: 30px;
-        padding-bottom: 15px;
-        position: relative;
-        &:before {
-          content: "•";
-          position: absolute;
-          left: 0px;
-          color: var(--main-yellow)
-        } 
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      padding-left: 30px;
+      padding-bottom: 15px;
+      position: relative;
+      &:before {
+        content: "•";
+        position: absolute;
+        left: 0px;
+        color: var(--main-yellow);
       }
     }
+  }
 
   .text_title {
     font-weight: 900;
@@ -165,11 +175,11 @@ const ServicesMargin = styled.div`
     position: relative;
   }
   .contact_iframe {
-    width: 100%; 
+    width: 100%;
     height: 400px;
   }
 `
-const SideImage = styled.div `
+const SideImage = styled.div`
   position: absolute;
   top: 170px;
   left: 0;
@@ -178,63 +188,107 @@ const SideImage = styled.div `
   height: 600px;
   background-position: right;
   background-size: cover;
-  -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
-  box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
   @media (max-width: 980px) {
     display: none;
   }
 `
 class PageLayoutAbout extends React.Component {
-  render () {
+  render() {
     return (
       <ServicesWrapper>
         <SideImage />
         <ServicesMargin>
-        <Grid container spacing={24}>
-            <Grid item xs={4} className="responsive_grid_1"></Grid>
+          <Grid container spacing={24}>
+            <Grid item xs={4} className="responsive_grid_1" />
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <div className="title_wrapper">
-              <h1 className="service_name">kontakt</h1>
-              <h1 className="services">Všetky potrebné informácie pre kontakt s nami</h1>
+                <h1 className="service_name">kontakt</h1>
+                <h1 className="services">
+                  Všetky potrebné informácie pre kontakt s nami
+                </h1>
               </div>
               <p>
-              Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka na trhu svoju kvalitu v personálnych službách, doprave, upratovacom servise a organizovaní eventov.                                              
+                Spoločnosť PaS Services s.r.o. je jednou z firiem, ktorá ponúka
+                na trhu svoju kvalitu v personálnych službách, doprave,
+                upratovacom servise a organizovaní eventov.
               </p>
               <Divider height="70px" />
-              <p className="text_title">
-                Kontaktný formulár
-              </p>
-              <form method="post" action="https://www.briskforms.com/go/715a785ffead4b4dbb21f0a42a2a7896">
+              <p className="text_title">Kontaktný formulár</p>
+              <form
+                method="post"
+                action="https://www.briskforms.com/go/715a785ffead4b4dbb21f0a42a2a7896"
+              >
                 <div className="radio_wrapper">
-                  <input type="radio" id="contactChoice1"
-                  name="predmet" value="Reakcia na ponuku práce" checked/>
-                  <label className="label_1" for="contactChoice1">Reakcia na ponuku práce</label>
-                  <input type="radio" id="contactChoice2"
-                  name="predmet" value="Vypracovanie cenovej ponuky" />
-                  <label for="contactChoice2">Vypracovanie cenovej ponuky</label>
+                  <input
+                    type="radio"
+                    id="contactChoice1"
+                    name="predmet"
+                    value="Reakcia na ponuku práce"
+                    checked
+                  />
+                  <label className="label_1" for="contactChoice1">
+                    Reakcia na ponuku práce
+                  </label>
+                  <input
+                    type="radio"
+                    id="contactChoice2"
+                    name="predmet"
+                    value="Vypracovanie cenovej ponuky"
+                  />
+                  <label for="contactChoice2">
+                    Vypracovanie cenovej ponuky
+                  </label>
                 </div>
                 <div>
-                  <input placeholder="Meno" type="text" id="name" name="Meno" required/>
+                  <input
+                    placeholder="Meno"
+                    type="text"
+                    id="name"
+                    name="Meno"
+                    required
+                  />
                 </div>
                 <div>
-                  <input placeholder="Email" type="email" id="mail" name="Email" required/>
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    id="mail"
+                    name="Email"
+                    required
+                  />
                 </div>
                 <div>
-                  <textarea placeholder="Správa" id="msg" name="Správa" required></textarea>
+                  <textarea
+                    placeholder="Správa"
+                    id="msg"
+                    name="Správa"
+                    required
+                  />
                 </div>
                 <div>
                   <input type="checkbox" name="q" id="a-0" required autofocus />
-                  <label for="a-0">Súhlasím s odoslaním údajov. (<a className="poucenie" href="https://www.agenturapas.sk/gdpr">poučenie</a>)</label>
+                  <label for="a-0">
+                    Súhlasím s odoslaním údajov. (
+                    <a
+                      className="poucenie"
+                      href="https://www.agenturapas.sk/gdpr"
+                    >
+                      poučenie
+                    </a>
+                    )
+                  </label>
                 </div>
                 <Divider height="40px" />
-                  <div class="button">
-                    <button type="submit"><span>Odoslať Formulár</span></button>
-                  </div>
+                <div class="button">
+                  <button type="submit">
+                    <span>Odoslať formulár</span>
+                  </button>
+                </div>
               </form>
               <Divider height="70px" />
-              <p className="text_title">
-                Firemné údaje
-              </p>
+              <p className="text_title">Firemné údaje</p>
               <ul>
                 <li>názov spoločnosti: PaS Services spol. s r. o.</li>
                 <li>sídlo spoločnosti: Starozagorská 41, 040 23 Košice</li>
@@ -242,42 +296,60 @@ class PageLayoutAbout extends React.Component {
                 <li>IČO: 50750178</li>
                 <li>DIČ: 2120458901</li>
                 <li>IČ DPH:SK2120458901</li>
-                <li>zapísaná v obchodnom registri Okresného súdu Košice I, oddiel Sro, vložka číslo: 40907/V</li>
+                <li>
+                  zapísaná v obchodnom registri Okresného súdu Košice I, oddiel
+                  Sro, vložka číslo: 40907/V
+                </li>
               </ul>
               <Divider height="70px" />
-              <p className="text_title">
-                Kontakt
-              </p>
+              <p className="text_title">Kontakt</p>
               <ul>
-                <li>adresa agentúry a kancelárie prvého kontaktu: Moldavská 43/A, 1. poschodie</li>
-                <li>e-mail: <a href="mailto:agenturapas@agenturapas.sk" target="_blank" rel="noopener noreferrer">agenturapas@agenturapas.sk</a></li>
+                <li>
+                  adresa agentúry a kancelárie prvého kontaktu: Moldavská 43/A,
+                  1. poschodie
+                </li>
+                <li>
+                  e-mail:{" "}
+                  <a
+                    href="mailto:agenturapas@agenturapas.sk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    agenturapas@agenturapas.sk
+                  </a>
+                </li>
                 <li>telefón/mobil: +421-(0)917 237 471</li>
               </ul>
               <Divider height="70px" />
-              <div style={{position: 'relative', height: '300px'}}>
-              <Map
-                style={{width: '100%', height: '300px', position: 'relative'}}
-                google={this.props.google}
-                initialCenter={{
+              <div style={{ position: "relative", height: "300px" }}>
+                <Map
+                  style={{
+                    width: "100%",
+                    height: "300px",
+                    position: "relative",
+                  }}
+                  google={this.props.google}
+                  initialCenter={{
                     lat: 48.700554,
-                    lng: 21.238518
-                }}>
-                <Marker
-                  name={'PaS Services'}
-                  position={{lat: 48.700554, lng: 21.238518}} />
-            </Map>
-            </div>
-            <Divider height="70px" />
-              <ButtonWrapper buttonText='Napíšte Nám' buttonLink='mail' />
+                    lng: 21.238518,
+                  }}
+                >
+                  <Marker
+                    name={"PaS Services"}
+                    position={{ lat: 48.700554, lng: 21.238518 }}
+                  />
+                </Map>
+              </div>
+              <Divider height="70px" />
+              <ButtonWrapper buttonText="Napíšte Nám" buttonLink="mail" />
             </Grid>
           </Grid>
         </ServicesMargin>
       </ServicesWrapper>
-    );
+    )
   }
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCQiSC_G-QmJp9dfVTz4Yxpt1c-d-UAJzg')
+  apiKey: "AIzaSyCQiSC_G-QmJp9dfVTz4Yxpt1c-d-UAJzg",
 })(PageLayoutAbout)
-

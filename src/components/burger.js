@@ -1,4 +1,4 @@
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from "react-burger-menu"
 import React from "react"
 import styled from "styled-components"
 import stripe_bg from "../assets/stripe_bg.png"
@@ -7,7 +7,7 @@ import mail_orange from "../assets/mail_orange.svg"
 import place_orange from "../assets/place_orange.svg"
 import { Link } from "gatsby"
 
-const MenuWrapper = styled.div `
+const MenuWrapper = styled.div`
   .bm-burger-button {
     z-index: 1000;
     width: 40px;
@@ -110,7 +110,7 @@ const MenuWrapper = styled.div `
   }
 `
 const MenuItem = styled.span`
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 900;
   text-transform: uppercase;
@@ -121,13 +121,13 @@ const MenuItem = styled.span`
   }
 `
 const Kontakt = styled.div`
-    position: absolute;
-    float: left;
-    top: 280px;
-    left: 780px;
+  position: absolute;
+  float: left;
+  top: 280px;
+  left: 780px;
   span {
     display: block;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 900;
     color: var(--main-yellow);
@@ -164,27 +164,64 @@ const Icon = styled.div`
   }
 `
 class Burger extends React.Component {
-  render () {
+  render() {
     return (
       <MenuWrapper>
-        <Menu right width={ '100%' }>
-          <span className="ahoj"><Link to="/o_nas"><MenuItem>O Nás</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/sluzby"><MenuItem>Naše služby</MenuItem></Link></span>
-          <span className="ahoj"><Link to="/ponuka_prace"><MenuItem>Ponuka Práce</MenuItem></Link></span>
+        <Menu right width={"100%"}>
+          <span className="ahoj">
+            <Link to="/o_nas">
+              <MenuItem>O Nás</MenuItem>
+            </Link>
+          </span>
+          <span className="ahoj">
+            <Link to="/sluzby">
+              <MenuItem>Naše služby</MenuItem>
+            </Link>
+          </span>
+          <span className="ahoj">
+            <Link to="/ponuka_prace">
+              <MenuItem>Ponuka Práce</MenuItem>
+            </Link>
+          </span>
           {/*<span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>*/}
-          <span className="ahoj"><Link to="/kontakt"><MenuItem>Kontakt</MenuItem></Link></span>
+          <span className="ahoj">
+            <Link to="/kontakt">
+              <MenuItem>Kontakt</MenuItem>
+            </Link>
+          </span>
           <Kontakt>
             <span>Kontakt</span>
-            <p>moldavska cesta 43/A</p>
+            <p>Moldavská 43/A, 1. poschodie</p>
             <p>0917 237 471</p>
-            <p><a className="classic_link" href="mailto:agenturapas@agenturapas.sk">agenturapas@agenturapas.sk</a></p>
-            <a href="https://www.facebook.com/passervices.sk/" rel="noopener noreferrer" target="_blank"><Icon className='facebook' /></a>
-            <a href="mailto:agenturapas@agenturapas.sk"><Icon className='mail' /></a>
-            <a href="https://www.google.com/maps/place/Moldavsk%C3%A1+cesta+43,+040+11+Ko%C5%A1ice/@48.7008844,21.2371226,17z/data=!4m5!3m4!1s0x473ee01a682c3771:0xa87216d493a8ffd3!8m2!3d48.7008703!4d21.2388607" rel="noopener noreferrer" target="_blank"><Icon className='place' /></a>
+            <p>
+              <a
+                className="classic_link"
+                href="mailto:agenturapas@agenturapas.sk"
+              >
+                agenturapas@agenturapas.sk
+              </a>
+            </p>
+            <a
+              href="https://www.facebook.com/passervices.sk/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Icon className="facebook" />
+            </a>
+            <a href="mailto:agenturapas@agenturapas.sk">
+              <Icon className="mail" />
+            </a>
+            <a
+              href="https://www.google.com/maps/place/Moldavsk%C3%A1+cesta+43,+040+11+Ko%C5%A1ice/@48.7008844,21.2371226,17z/data=!4m5!3m4!1s0x473ee01a682c3771:0xa87216d493a8ffd3!8m2!3d48.7008703!4d21.2388607"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <Icon className="place" />
+            </a>
           </Kontakt>
         </Menu>
       </MenuWrapper>
-    );
+    )
   }
 }
 
