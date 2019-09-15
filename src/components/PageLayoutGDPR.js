@@ -208,7 +208,7 @@ V Košiciach dňa 27.5.2019
               
               <Divider height="70px" />
               <p className="text_title">Na stiahnutie</p>
-              <a href="/Súhlas_so_spracovaním_osobných_údajov.doc">Súhlas so spracovaním osobných údajov</a>
+              <a href="/suhlas_so_spracovanim_osobnych_udajov.doc">Súhlas so spracovaním osobných údajov</a>
               <a href="/Žiadosť_o_obmedzenie_spracúvania_osobných_údajov.doc">Žiadosť o obmedzenie spracúvania osobných údajov</a>
               <a href="/Žiadosť_o_opravu_a_doplnenie_osobných_údajov.doc">Žiadosť o opravu a doplnenie osobných údajov</a>
               <a href="/Žiadosť_o_poskytnutie_informácií.doc">Žiadosť o poskytnutie informácií</a>
