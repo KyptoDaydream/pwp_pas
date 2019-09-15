@@ -208,12 +208,12 @@ V Košiciach dňa 27.5.2019
               
               <Divider height="70px" />
               <p className="text_title">Na stiahnutie</p>
-              <a href="na_stiahnutie_Súhlas so spracovaním osobných údajov.doc">Súhlas so spracovaním osobných údajov</a>
-              <a href="na_stiahnutie_Žiadosť o obmedzenie spracúvania osobných údajov.doc">Žiadosť o obmedzenie spracúvania osobných údajov</a>
-              <a href="na_stiahnutie_Žiadosť o opravu a doplnenie osobných údajov.doc">Žiadosť o opravu a doplnenie osobných údajov</a>
-              <a href="na_stiahnutie_Žiadosť o poskytnutie informácií.doc">Žiadosť o poskytnutie informácií</a>
-              <a href="na_stiahnutie_Žiadosť o vydanie osobných údajov z dôvodu uplatnenia práva na prenosnosť.doc">Žiadosť o vydanie osobných údajov z dôvodu uplatnenia práva na prenosnosť</a>
-              <a href="na_stiahnutie_Žiadosť o výmaz osobných údajov.doc">Žiadosť o výmaz osobných údajov</a>
+              <a href="/gdpr/Súhlas_so_spracovaním_osobných_údajov.doc">Súhlas so spracovaním osobných údajov</a>
+              <a href="/gdpr/Žiadosť_o_obmedzenie_spracúvania_osobných_údajov.doc">Žiadosť o obmedzenie spracúvania osobných údajov</a>
+              <a href="/gdpr/Žiadosť_o_opravu_a_doplnenie_osobných_údajov.doc">Žiadosť o opravu a doplnenie osobných údajov</a>
+              <a href="/gdpr/Žiadosť_o_poskytnutie_informácií.doc">Žiadosť o poskytnutie informácií</a>
+              <a href="/gdpr/Žiadosť_o_vydanie_osobných_údajov_z_dôvodu_uplatnenia_práva_na_prenosnosť.doc">Žiadosť o vydanie osobných údajov z dôvodu uplatnenia práva na prenosnosť</a>
+              <a href="/gdpr/Žiadosť_o_výmaz_osobných_údajov.doc">Žiadosť o výmaz osobných údajov</a>
             </Grid>
           </Grid>
         </ServicesMargin>

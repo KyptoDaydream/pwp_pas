@@ -168,7 +168,9 @@ class PageLayoutAbout extends React.Component {
                     zamestnávateľov
                   </p>
                 </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
+                <ExpansionPanelDetails
+                  classes={{ root: "expanable_content show" }}
+                >
                   <ul>
                     <li>Činnosť agentúry dočasného zamestnávania</li>
                     <li>Kompletné pracovno-právne úkony</li>

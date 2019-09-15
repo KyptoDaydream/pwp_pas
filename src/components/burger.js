@@ -18,13 +18,13 @@ const MenuWrapper = styled.div`
   }
   @media (max-width: 700px) {
     .bm-burger-button {
-    z-index: 1000;
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    right: 50px;
-    top: 25px;
-  }
+      z-index: 1000;
+      width: 30px;
+      height: 20px;
+      position: absolute;
+      right: 50px;
+      top: 25px;
+    }
   }
   .bm-burger-bars {
     background: var(--main-yellow);
@@ -50,27 +50,28 @@ const MenuWrapper = styled.div`
     height: 40px !important;
     transition: 0.3s;
   }
-  .bm-cross-button:hover .bm-cross{
+  .bm-cross-button:hover .bm-cross {
     background: var(--main-yellow);
   }
   .bm-item-list {
-    width: 600px;
-    /* margin-top: 140px; */
+    /*width: 800px;
+    margin-top: 140px; 
     margin-top: 240px;
-    margin-left: 100px;
-    height: auto !important;
+    margin-left: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .bm-menu-wrap {
     background-image: url(${stripe_bg});
-    }
+  }
   .bm-menu {
-  /*  background: rgba(238,146,12,0.5); /* Old browsers */
-  /*  background: -moz-linear-gradient(45deg, rgba(255,255,255,0) 0%,rgba(238,146,12,0.9) 100%); /* FF3.6-15 */
+    /*  background: rgba(238,146,12,0.5); /* Old browsers */
+    /*  background: -moz-linear-gradient(45deg, rgba(255,255,255,0) 0%,rgba(238,146,12,0.9) 100%); /* FF3.6-15 */
     /*background: -webkit-linear-gradient(45deg, rgba(255,255,255,0) 0%,rgba(238,146,12,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
     /*background: linear-gradient(45deg, rgba(255,255,255,0) 0%,rgba(238,146,12,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  
   }
-  .bm-item{
+  .bm-item {
     a {
       display: inline-block;
       transition: 0.3s;
@@ -81,32 +82,30 @@ const MenuWrapper = styled.div`
       color: var(--main-yellow);
     }
     a.classic_link {
-      color: var(--text-grey)
+      color: var(--text-grey);
     }
     a.class_link:hover {
-      color: var(--text-grey)
+      color: var(--text-grey);
     }
   }
   .ahoj {
     display: block;
     color: black;
   }
-  @media (min-width: 1400px) {
+
+  @media (max-width: 600px) {
     .bm-item-list {
-    /* margin-top: 15%; */
-    margin-top: 25%
-    margin-left: 20%;
-    }
+      padding-left: 30px;
   }
 
   @media (max-width: 440px) {
     .bm-item-list {
-    width: 100%;
-    margin: 0;
-    padding-top: 140px;
-    padding-left: 30px;
-    height: auto !important;
-  }
+      width: 100%;
+      margin: 0;
+      padding-top: 190px;
+      padding-left: 30px;
+      height: auto !important;
+    }
   }
 `
 const MenuItem = styled.span`
@@ -120,11 +119,16 @@ const MenuItem = styled.span`
     font-size: 32px;
   }
 `
+const MenuItems = styled.div`
+  width: 600px;
+`
 const Kontakt = styled.div`
-  position: absolute;
+  width: 200px;
+  margin-top: 70px;
+  /* position: absolute;
   float: left;
   top: 280px;
-  left: 780px;
+  left: 780px; */
   span {
     display: block;
     font-family: "Poppins", sans-serif;
@@ -132,10 +136,6 @@ const Kontakt = styled.div`
     font-weight: 900;
     color: var(--main-yellow);
     text-transform: uppercase;
-  }
-  @media (min-width: 1400px) {
-    top: 45%;
-    left: 60%;
   }
   @media (max-width: 1000px) {
     display: none !important;
@@ -168,27 +168,29 @@ class Burger extends React.Component {
     return (
       <MenuWrapper>
         <Menu right width={"100%"}>
-          <span className="ahoj">
-            <Link to="/o_nas">
-              <MenuItem>O Nás</MenuItem>
-            </Link>
-          </span>
-          <span className="ahoj">
-            <Link to="/sluzby">
-              <MenuItem>Naše služby</MenuItem>
-            </Link>
-          </span>
-          <span className="ahoj">
-            <Link to="/ponuka_prace">
-              <MenuItem>Ponuka Práce</MenuItem>
-            </Link>
-          </span>
-          {/*<span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>*/}
-          <span className="ahoj">
-            <Link to="/kontakt">
-              <MenuItem>Kontakt</MenuItem>
-            </Link>
-          </span>
+          <MenuItems>
+            <span className="ahoj">
+              <Link to="/o_nas">
+                <MenuItem>O Nás</MenuItem>
+              </Link>
+            </span>
+            <span className="ahoj">
+              <Link to="/sluzby">
+                <MenuItem>Naše služby</MenuItem>
+              </Link>
+            </span>
+            <span className="ahoj">
+              <Link to="/ponuka_prace">
+                <MenuItem>Ponuka Práce</MenuItem>
+              </Link>
+            </span>
+            {/*<span className="ahoj"><Link to="/blog"><MenuItem>Blog</MenuItem></Link></span>*/}
+            <span className="ahoj">
+              <Link to="/kontakt">
+                <MenuItem>Kontakt</MenuItem>
+              </Link>
+            </span>
+          </MenuItems>
           <Kontakt>
             <span>Kontakt</span>
             <p>Moldavská 43/A, 1. poschodie</p>
