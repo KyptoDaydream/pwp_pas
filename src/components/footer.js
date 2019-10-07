@@ -159,7 +159,7 @@ class Footer extends React.Component {
                   Organizovanie eventov
                 </Link>
                 <Link to="/ponuka_prace" className="classic_link footer_menu">
-                  Pracovne Pozicie
+                  Pracovné Pozície
                 </Link>
                 <Link to="/gdpr" className="classic_link footer_menu">
                   GDPR
