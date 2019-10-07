@@ -5,7 +5,7 @@ import logo_black from "../assets/logo_yellow_black.png"
 import Burger from "./burger"
 import { Link } from "gatsby"
 
-const HeaderWrapper = styled.div `
+const HeaderWrapper = styled.div`
   margin: 0;
   width: 100%;
   height: 150px;
@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div `
     background: var(--dark-blue);
   }
 `
-const Logo = styled.div `
+const Logo = styled.div`
   margin-left: 50px;
   margin-top: 15px;
   width: 120px;
@@ -29,56 +29,60 @@ const Logo = styled.div `
   transition: 0.5s;
   &.white_logo {
     background: url(${logo});
-  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   &.black_logo {
     background: url(${logo_black});
-  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   @media (max-width: 700px) {
     width: 40px;
     height: 40px;
     &.black_logo {
       background: url(${logo});
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
-  
 `
-class Header extends React.Component  {
+class Header extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { 
-      color: 'logo',
-      showMenu: true 
-    };
+    super(props)
+    this.state = {
+      color: "logo",
+      showMenu: true,
+    }
   }
-  
+
   listenScrollEvent = e => {
     if (window.scrollY < 400) {
-      this.setState({color: 'logo'})
+      this.setState({ color: "logo" })
     } else {
-      this.setState({color: 'logo_black'})
+      this.setState({ color: "logo_black" })
     }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.listenScrollEvent)
+    window.addEventListener("scroll", this.listenScrollEvent)
   }
 
   render() {
-    console.log(this.props);
-    const logo_class = this.state.color === 'logo' && this.props.blog !== true ? 'white_logo' : 'black_logo';
+    console.log(this.props)
+    console.log(this.state.color)
+    const logo_class =
+      this.state.color === "logo" &&
+      (this.props.blog !== true && this.props.blog !== "true")
+        ? "white_logo"
+        : "black_logo"
     return (
       <HeaderWrapper>
         <Link to="/">
-          <Logo className={logo_class} props={this.state.color}/>
+          <Logo className={logo_class} props={this.state.color} />
         </Link>
         <Burger />
       </HeaderWrapper>

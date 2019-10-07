@@ -281,7 +281,7 @@ class PageLayoutAbout extends React.Component {
                   </label>
                 </div>
                 <Divider height="40px" />
-                <div class="button">
+                <div className="button">
                   <button type="submit">
                     <span>Odoslať formulár</span>
                   </button>

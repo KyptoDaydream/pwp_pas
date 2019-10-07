@@ -133,7 +133,7 @@ class Footer extends React.Component {
                 </p>
               </Grid>
               <Grid item xs={3} className="responsive_footer menu">
-                <p class="footer_title">MENU</p>
+                <p className="footer_title">MENU</p>
                 <Link to="/o_nas" className="classic_link footer_menu">
                   O nás
                 </Link>
@@ -170,7 +170,7 @@ class Footer extends React.Component {
                 </Link>
               </Grid>
               <Grid item xs={3} className="responsive_footer">
-                <p class="footer_title">KONTAKT</p>
+                <p className="footer_title">KONTAKT</p>
                 <p className="footer_kontakt">+421-(0)917 237 471</p>
                 <p>Moldavská 43/A, 1. poschodie</p>
                 <p>

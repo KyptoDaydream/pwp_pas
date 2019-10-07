@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from '@material-ui/core/Grid';
-import side_image from '../assets/side_image_2.jpg'
-import Divider from './divider'
-import ButtonWrapper from './buttonWrapper'
+import Grid from "@material-ui/core/Grid"
+import side_image from "../assets/side_image_5.jpg"
+import Divider from "./divider"
+import ButtonWrapper from "./buttonWrapper"
 
-const ServicesWrapper = styled.div `
+const ServicesWrapper = styled.div`
   width: 100%;
   padding: 50px;
   position: relative;
@@ -17,8 +17,8 @@ const ServicesWrapper = styled.div `
     bottom: 0;
     right: 15px;
     background-color: #fff;
-    -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
-    box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
   }
   @media (max-width: 980px) {
     :before {
@@ -39,26 +39,26 @@ const ServicesMargin = styled.div`
   margin: 0 auto;
   z-index: 999;
   ul {
-      margin: 0;
-      padding: 0;
-      li {
-        list-style: none;
-        padding-left: 30px;
-        padding-bottom: 15px;
-        position: relative;
-        &:before {
-          content: "•";
-          position: absolute;
-          left: 0px;
-          color: var(--main-yellow)
-        } 
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      padding-left: 30px;
+      padding-bottom: 15px;
+      position: relative;
+      &:before {
+        content: "•";
+        position: absolute;
+        left: 0px;
+        color: var(--main-yellow);
       }
     }
+  }
   .text_wrapper {
     position: relative;
-  }  
+  }
   .MuiPaper-rounded-5 {
-    border-top: 1px solid black;;
+    border-top: 1px solid black;
     box-shadow: none;
   }
   .MuiPaper-rounded-5:before {
@@ -73,7 +73,7 @@ const ServicesMargin = styled.div`
   }
   .expanable_panel {
     -webkit-box-shadow: none;
-	  -moz-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     border-top: 1px solid var(--light-gray);
     margin-bottom: 20px;
@@ -104,7 +104,7 @@ const ServicesMargin = styled.div`
     }
   }
 `
-const SideImage = styled.div `
+const SideImage = styled.div`
   position: absolute;
   top: 150px;
   left: 0;
@@ -113,41 +113,44 @@ const SideImage = styled.div `
   height: 600px;
   background-position: right;
   background-size: cover;
-  -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
-  box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
   @media (max-width: 980px) {
     display: none;
   }
 `
 class PageLayoutDoprava extends React.Component {
-  render () {  
+  render() {
     return (
       <ServicesWrapper>
         <SideImage />
         <ServicesMargin>
-        <Grid container spacing={24}>
-            <Grid item xs={4} className="responsive_grid_1"></Grid>
+          <Grid container spacing={24}>
+            <Grid item xs={4} className="responsive_grid_1" />
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <div className="title_wrapper">
-              <h1 className="service_name">dopravca</h1>
-              <h1 className="services">Váš partner v doprave do 3.5t</h1>
-              <ul> 
-                    <li>Dopravné služby pre kuriérske spoločnosti</li>
-                    <li>Starostlivosť o pridelený rajón</li>
-                    <li>Doprava tovaru na základe pridelených objednávok</li>
-                    <li>Vyzdvihnutie tovaru z Košického a Prešovského kraja</li>
-                    <li>Doprava v rámci SR a EÚ</li>
-                    <li>Vozový park nových úžitkových vozidiel</li>
-                    <li>Dispečing - koordinácia dodania tovaru</li>
-                  </ul>
+                <h1 className="service_name">dopravca</h1>
+                <h1 className="services">Váš partner v doprave do 3.5t</h1>
+                <ul>
+                  <li>Dopravné služby pre kuriérske spoločnosti</li>
+                  <li>Starostlivosť o pridelený rajón</li>
+                  <li>Doprava tovaru na základe pridelených objednávok</li>
+                  <li>Vyzdvihnutie tovaru z Košického a Prešovského kraja</li>
+                  <li>Doprava v rámci SR a EÚ</li>
+                  <li>Vozový park nových úžitkových vozidiel</li>
+                  <li>Dispečing - koordinácia dodania tovaru</li>
+                </ul>
               </div>
               <Divider height="70px" />
-              <ButtonWrapper buttonText='Nezáväzná cenová ponuka' buttonLink='mail' />
+              <ButtonWrapper
+                buttonText="Nezáväzná cenová ponuka"
+                buttonLink="mail"
+              />
             </Grid>
           </Grid>
         </ServicesMargin>
       </ServicesWrapper>
-    );
+    )
   }
 }
 

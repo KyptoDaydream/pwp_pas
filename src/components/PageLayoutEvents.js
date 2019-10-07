@@ -1,15 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from '@material-ui/core/Grid';
-import side_image from '../assets/side_image_2.jpg'
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Divider from './divider'
-import ButtonWrapper from './buttonWrapper'
-import arrow from '../assets/arrow_expand.svg'
+import Grid from "@material-ui/core/Grid"
+import side_image from "../assets/side_image_7.jpg"
+import Divider from "./divider"
+import ButtonWrapper from "./buttonWrapper"
 
-const ServicesWrapper = styled.div `
+const ServicesWrapper = styled.div`
   width: 100%;
   padding: 50px;
   position: relative;
@@ -21,8 +17,8 @@ const ServicesWrapper = styled.div `
     bottom: 0;
     right: 15px;
     background-color: #fff;
-    -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
-    box-shadow: 0 20px 40px 0 rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.05);
   }
   @media (max-width: 980px) {
     :before {
@@ -43,26 +39,26 @@ const ServicesMargin = styled.div`
   margin: 0 auto;
   z-index: 999;
   ul {
-      margin: 0;
-      padding: 0;
-      li {
-        list-style: none;
-        padding-left: 30px;
-        padding-bottom: 15px;
-        position: relative;
-        &:before {
-          content: "•";
-          position: absolute;
-          left: 0px;
-          color: var(--main-yellow)
-        } 
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      padding-left: 30px;
+      padding-bottom: 15px;
+      position: relative;
+      &:before {
+        content: "•";
+        position: absolute;
+        left: 0px;
+        color: var(--main-yellow);
       }
     }
+  }
   .text_wrapper {
     position: relative;
-  }  
+  }
   .MuiPaper-rounded-5 {
-    border-top: 1px solid black;;
+    border-top: 1px solid black;
     box-shadow: none;
   }
   .MuiPaper-rounded-5:before {
@@ -77,7 +73,7 @@ const ServicesMargin = styled.div`
   }
   .expanable_panel {
     -webkit-box-shadow: none;
-	  -moz-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     border-top: 1px solid var(--light-gray);
     margin-bottom: 20px;
@@ -108,7 +104,7 @@ const ServicesMargin = styled.div`
     }
   }
 `
-const SideImage = styled.div `
+const SideImage = styled.div`
   position: absolute;
   top: 250px;
   left: 0;
@@ -117,84 +113,91 @@ const SideImage = styled.div `
   height: 600px;
   background-position: right;
   background-size: cover;
-  -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
-  box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
   @media (max-width: 980px) {
     display: none;
   }
 `
-const ExpandIcon = styled.div`
-  background: url(${arrow});
-  width: 24px;
-  height: 24px;
+const Panel = styled.div`
+  padding: 0 24px 0 24px;
+  min-height: 48px;
+  border-top: 1px solid var(--light-gray);
+  padding-bottom: 35px;
+  &.first_panel {
+    border-top: 0px;
+    padding-top: 20px;
+  }
+  p {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    color: var(--main-yellow);
+    font-weight: 600;
+  }
 `
 class PageLayoutAbout extends React.Component {
   state = {
     expanded: false,
-  };
+  }
 
   handleChange = panel => (event, expanded) => {
     this.setState({
       expanded: expanded ? panel : false,
-    });
-  };
+    })
+  }
 
-  render () {
-    const { expanded } = this.state;
+  render() {
     return (
       <ServicesWrapper>
         <SideImage />
         <ServicesMargin>
-        <Grid container spacing={24}>
-            <Grid item xs={4} className="responsive_grid_1"></Grid>
+          <Grid container spacing={24}>
+            <Grid item xs={4} className="responsive_grid_1" />
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <div className="title_wrapper">
-              <h1 className="service_name">organizovanie eventov</h1>
-              <h1 className="services">Ponúkame originálne nápady pri organizovaní vaších firemných akcií</h1>
+                <h1 className="service_name">organizovanie eventov</h1>
+                <h1 className="services">
+                  Ponúkame originálne nápady pri organizovaní vaších firemných
+                  akcií
+                </h1>
               </div>
-              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel1'} onChange={this.handleChange('panel1')}>
-                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Indorové</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
-                  <ul> 
-                    <li>Firmené akcie po celý rok</li>
-                    <li>Koncoročné večierky</li>
-                    <li>Vianočné - novoročné akcie</li>
-                    <li>Športové a adrenalínové aktivity</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel classes={{ root: 'expanable_panel' }} expanded={expanded === 'panel2'} onChange={this.handleChange('panel2')}>
-                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Outdorové</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
-                  <ul> 
-                    <li>Športové a adrenalínové aktivity</li>
-                    <li>Letná párty s programom</li>
-                    <li>Grilovanie pod holým nebom</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel classes={{ root: 'expanable_panel last' }} expanded={expanded === 'panel3'} onChange={this.handleChange('panel3')}>
-                <ExpansionPanelSummary classes={{ root: 'expanable_title' }} expandIcon={<ExpandIcon />}>
-                  <p>Catering priamo k vám do firmy alebo na Vami určené miesto</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: 'expanable_content' }}>
-                  <ul> 
-                    <li>Teplé a studené bufetové stoly</li>
-                    <li>Raňajkové menu</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
+              <Panel className="first_panel">
+                <p>Indorové</p>
+                <ul>
+                  <li>Firmené akcie po celý rok</li>
+                  <li>Koncoročné večierky</li>
+                  <li>Vianočné - novoročné akcie</li>
+                  <li>Športové a adrenalínové aktivity</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Outdorové</p>
+                <ul>
+                  <li>Športové a adrenalínové aktivity</li>
+                  <li>Letná párty s programom</li>
+                  <li>Grilovanie pod holým nebom</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>
+                  Catering priamo k vám do firmy alebo na Vami určené miesto
+                </p>
+                <ul>
+                  <li>Teplé a studené bufetové stoly</li>
+                  <li>Raňajkové menu</li>
+                </ul>
+              </Panel>
+
               <Divider height="70px" />
-              <ButtonWrapper buttonText='Nezáväzná cenová ponuka' buttonLink='mail' />
+              <ButtonWrapper
+                buttonText="Nezáväzná cenová ponuka"
+                buttonLink="mail"
+              />
             </Grid>
           </Grid>
         </ServicesMargin>
       </ServicesWrapper>
-    );
+    )
   }
 }
 

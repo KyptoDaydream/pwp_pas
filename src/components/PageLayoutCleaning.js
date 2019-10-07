@@ -1,13 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
-import side_image from "../assets/side_image_2.jpg"
-import ExpansionPanel from "@material-ui/core/ExpansionPanel"
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
+import side_image from "../assets/side_image_6.jpg"
 import Divider from "./divider"
 import ButtonWrapper from "./buttonWrapper"
-import arrow from "../assets/arrow_expand.svg"
 
 const ServicesWrapper = styled.div`
   width: 100%;
@@ -123,10 +119,21 @@ const SideImage = styled.div`
     display: none;
   }
 `
-const ExpandIcon = styled.div`
-  background: url(${arrow});
-  width: 24px;
-  height: 24px;
+const Panel = styled.div`
+  padding: 0 24px 0 24px;
+  min-height: 48px;
+  border-top: 1px solid var(--light-gray);
+  padding-bottom: 35px;
+  &.first_panel {
+    border-top: 0px;
+    padding-top: 20px;
+  }
+  p {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    color: var(--main-yellow);
+    font-weight: 600;
+  }
 `
 class PageLayoutAbout extends React.Component {
   state = {
@@ -140,7 +147,6 @@ class PageLayoutAbout extends React.Component {
   }
 
   render() {
-    const { expanded } = this.state
     return (
       <ServicesWrapper>
         <SideImage />
@@ -154,119 +160,64 @@ class PageLayoutAbout extends React.Component {
                   Maximálna snaha o efektívnosť a kvalitu vykonávaných prác
                 </h1>
               </div>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel" }}
-                expanded={expanded === "panel1"}
-                onChange={this.handleChange("panel1")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Upratovanie</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>Interiérov a exteriérov</li>
-                    <li>Kancelárskych a skladových priestorov</li>
-                    <li>Bytových a nebytových priestorov</li>
-                    <li>
-                      Čistenie priemyselných objektov, vrátane čistenia
-                      technologických zariadení a konštrukcií
-                    </li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel" }}
-                expanded={expanded === "panel2"}
-                onChange={this.handleChange("panel2")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Intervaly čistiacich prác</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>Denné</li>
-                    <li>Týždenné</li>
-                    <li>Mesačné</li>
-                    <li>Kvartálne</li>
-                    <li>Ročné</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel" }}
-                expanded={expanded === "panel4"}
-                onChange={this.handleChange("panel4")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Ponuka upratovacieho servisu</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>Kompletná údržba všetkých typov podláh</li>
-                    <li>Umývanie okien a presklených častí</li>
-                    <li>Tepovanie kobercov, kresiel a stoličiek</li>
-                    <li>
-                      Vysávanie, utieranie prachu, vynášanie odpadkov,
-                      upratovanie kuchynky a sociálnych zariadení
-                    </li>
-                    <li>
-                      Generálne upratovanie po maliaroch alebo stavebných
-                      prácach
-                    </li>
-                    <li>Priemyselné a chemické čistenie</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel" }}
-                expanded={expanded === "panel5"}
-                onChange={this.handleChange("panel5")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Realizácia</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>
-                      Maximálna snaha o efektívnosť a kvalitu vykonávaných prác
-                    </li>
-                    <li>
-                      Použitie výlučne certifkovaných čistiacich, dezifenkčných
-                      a chemických prostriedkov
-                    </li>
-                    <li>Vyškoleným tímom</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel last" }}
-                expanded={expanded === "panel3"}
-                onChange={this.handleChange("panel3")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Doplnkové služby</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>Údržba a kosenie vonkajších trávnatých plôch</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
+              <Panel className="first_panel">
+                <p>Upratovanie</p>
+                <ul>
+                  <li>Interiérov a exteriérov</li>
+                  <li>Kancelárskych a skladových priestorov</li>
+                  <li>Bytových a nebytových priestorov</li>
+                  <li>
+                    Čistenie priemyselných objektov, vrátane čistenia
+                    technologických zariadení a konštrukcií
+                  </li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Intervaly čistiacich prác</p>
+                <ul>
+                  <li>Denné</li>
+                  <li>Týždenné</li>
+                  <li>Mesačné</li>
+                  <li>Kvartálne</li>
+                  <li>Ročné</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Ponuka upratovacieho servisu</p>
+                <ul>
+                  <li>Kompletná údržba všetkých typov podláh</li>
+                  <li>Umývanie okien a presklených častí</li>
+                  <li>Tepovanie kobercov, kresiel a stoličiek</li>
+                  <li>
+                    Vysávanie, utieranie prachu, vynášanie odpadkov, upratovanie
+                    kuchynky a sociálnych zariadení
+                  </li>
+                  <li>
+                    Generálne upratovanie po maliaroch alebo stavebných prácach
+                  </li>
+                  <li>Priemyselné a chemické čistenie</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Realizácia</p>
+                <ul>
+                  <li>
+                    Maximálna snaha o efektívnosť a kvalitu vykonávaných prác
+                  </li>
+                  <li>
+                    Použitie výlučne certifkovaných čistiacich, dezifenkčných a
+                    chemických prostriedkov
+                  </li>
+                  <li>Vyškoleným tímom</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Doplnkové služby</p>
+                <ul>
+                  <li>Údržba a kosenie vonkajších trávnatých plôch</li>
+                </ul>
+              </Panel>
+
               <Divider height="70px" />
               <ButtonWrapper
                 buttonText="Nezáväzná cenová ponuka"

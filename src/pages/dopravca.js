@@ -3,10 +3,10 @@ import styled from "styled-components"
 import Header from "../components/header"
 import "../styles/global.css"
 import stripe_bg from "../assets/stripe_bg.png"
-import Divider from '../components/divider'
-import PageLayoutDoprava from '../components/PageLayoutDoprava'
-import TitleImage from '../components/titleImage'
-import Footer from '../components/footer'
+import Divider from "../components/divider"
+import PageLayoutDoprava from "../components/PageLayoutDoprava"
+import TitleImage from "../components/titleImage"
+import Footer from "../components/footer"
 import { Helmet } from "react-helmet"
 
 const PageWrapper = styled.div`
@@ -22,11 +22,18 @@ class PageAbout extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>PaS Services | dopravca do 3.5t</title>
-          <meta name="description" content="Spoločnosť PaS Services s.r.o. je firma, ktorá ponúka na trhu svoje služby v oblasti personálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií."/>
-          <meta name="keywords" content="Pas Services, Agentura PaS"/>
+          <meta
+            name="description"
+            content="Spoločnosť PaS Services s.r.o. je firma, ktorá ponúka na trhu svoje služby v oblasti personálnych služieb, dočasného zamestnávania, dopravy, upratovacieho servisu, až po organizovanie rôznych firemných akcií."
+          />
+          <meta name="keywords" content="Pas Services, Agentura PaS" />
         </Helmet>
         <Header />
-        <TitleImage width="420px" componentClass="about_us" title="Zabezpečenie dopravy v rámci SR a EÚ"/>
+        <TitleImage
+          width="420px"
+          componentClass="logistic"
+          title="Zabezpečenie dopravy v rámci SR a EÚ"
+        />
         <Divider height="100px" />
         <PageLayoutDoprava />
         <Divider height="100px" />
@@ -34,6 +41,6 @@ class PageAbout extends React.Component {
       </PageWrapper>
     )
   }
-}  
+}
 
 export default PageAbout

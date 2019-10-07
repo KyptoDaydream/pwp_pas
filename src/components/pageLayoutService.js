@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 // import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 // import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 // import arrow from '../assets/arrow_expand.svg'
-import side_image from "../assets/side_image.jpg"
+import side_image from "../assets/side_image_3.jpg"
 import Divider from "./divider"
 import ButtonWrapper from "./buttonWrapper"
 

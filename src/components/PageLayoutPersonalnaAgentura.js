@@ -2,12 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 import side_image from "../assets/side_image_2.jpg"
-import ExpansionPanel from "@material-ui/core/ExpansionPanel"
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
 import Divider from "./divider"
 import ButtonWrapper from "./buttonWrapper"
-import arrow from "../assets/arrow_expand.svg"
 
 const ServicesWrapper = styled.div`
   width: 100%;
@@ -123,24 +119,24 @@ const SideImage = styled.div`
     display: none;
   }
 `
-const ExpandIcon = styled.div`
-  background: url(${arrow});
-  width: 24px;
-  height: 24px;
+const Panel = styled.div`
+  padding: 0 24px 0 24px;
+  min-height: 48px;
+  border-top: 1px solid var(--light-gray);
+  padding-bottom: 35px;
+  &.first_panel {
+    border-top: 0px;
+    padding-top: 20px;
+  }
+  p {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    color: var(--main-yellow);
+    font-weight: 600;
+  }
 `
 class PageLayoutAbout extends React.Component {
-  state = {
-    expanded: false,
-  }
-
-  handleChange = panel => (event, expanded) => {
-    this.setState({
-      expanded: expanded ? panel : false,
-    })
-  }
-
   render() {
-    const { expanded } = this.state
     return (
       <ServicesWrapper>
         <SideImage />
@@ -154,94 +150,60 @@ class PageLayoutAbout extends React.Component {
                   Vyriešime nárazové alebo sezónne pracovné sily
                 </h1>
               </div>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel" }}
-                expanded={expanded === "panel1"}
-                onChange={this.handleChange("panel1")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>
-                    Kompletná personálna agenda a mzdový servis pre
-                    zamestnávateľov
-                  </p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails
-                  classes={{ root: "expanable_content show" }}
-                >
-                  <ul>
-                    <li>Činnosť agentúry dočasného zamestnávania</li>
-                    <li>Kompletné pracovno-právne úkony</li>
-                    <li>Podpísanie zmlúv a dohôd</li>
-                    <li>Právne poradenstvo</li>
-                    <li>
-                      Zabezpečenie pracovníkov zamestnaných v súlade s
-                      legislatívou
-                    </li>
-                    <li>
-                      Prehľad a okamžitá kontrola dochádzky pracovníkov v našom
-                      dochádzkovom systéme
-                    </li>
-                    <li>
-                      Archivácia a ochrana osobných údajov podľa zákona č.
-                      18/2018 Z.z
-                    </li>
-                    <li>Služby so starostlivosťou o klienta 24/7</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel" }}
-                expanded={expanded === "panel2"}
-                onChange={this.handleChange("panel2")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Vyhľadávanie pracovníkov pre firmy</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>Nulové náklady pri vyhľadávaní pracovníkov</li>
-                    <li>Vyriešime nárazové alebo sezónne pracovné sily</li>
-                    <li>
-                      Zastrešíme problém výpadku Vášho kmeňového zamestnanca
-                    </li>
-                    <li>
-                      Zníženie úspor vašich nákladov pri umiestnení personálu
-                    </li>
-                    <li>
-                      Pokrytie jednoduchých a úzko špecializovaných pracovných
-                      pozícií
-                    </li>
-                    <li>Selekcia CV a motivačných listov</li>
-                    <li>Osobné pohovory s uchádzačmi o zamestnanie</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-              <ExpansionPanel
-                classes={{ root: "expanable_panel last" }}
-                expanded={expanded === "panel3"}
-                onChange={this.handleChange("panel3")}
-              >
-                <ExpansionPanelSummary
-                  classes={{ root: "expanable_title" }}
-                  expandIcon={<ExpandIcon />}
-                >
-                  <p>Oblasti vyhľadávania pracovných miest</p>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails classes={{ root: "expanable_content" }}>
-                  <ul>
-                    <li>Logistika</li>
-                    <li>Priemysel</li>
-                    <li>Stavebníctvo</li>
-                    <li>Administratíva</li>
-                  </ul>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
+              <Panel className="first_panel">
+                <p>
+                  Kompletná personálna agenda a mzdový servis pre
+                  zamestnávateľov
+                </p>
+                <ul>
+                  <li>Činnosť agentúry dočasného zamestnávania</li>
+                  <li>Kompletné pracovno-právne úkony</li>
+                  <li>Podpísanie zmlúv a dohôd</li>
+                  <li>Právne poradenstvo</li>
+                  <li>
+                    Zabezpečenie pracovníkov zamestnaných v súlade s
+                    legislatívou
+                  </li>
+                  <li>
+                    Prehľad a okamžitá kontrola dochádzky pracovníkov v našom
+                    dochádzkovom systéme
+                  </li>
+                  <li>
+                    Archivácia a ochrana osobných údajov podľa zákona č. 18/2018
+                    Z.z
+                  </li>
+                  <li>Služby so starostlivosťou o klienta 24/7</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Vyhľadávanie pracovníkov pre firmy</p>
+                <ul>
+                  <li>Nulové náklady pri vyhľadávaní pracovníkov</li>
+                  <li>Vyriešime nárazové alebo sezónne pracovné sily</li>
+                  <li>
+                    Zastrešíme problém výpadku Vášho kmeňového zamestnanca
+                  </li>
+                  <li>
+                    Zníženie úspor vašich nákladov pri umiestnení personálu
+                  </li>
+                  <li>
+                    Pokrytie jednoduchých a úzko špecializovaných pracovných
+                    pozícií
+                  </li>
+                  <li>Selekcia CV a motivačných listov</li>
+                  <li>Osobné pohovory s uchádzačmi o zamestnanie</li>
+                </ul>
+              </Panel>
+              <Panel>
+                <p>Oblasti vyhľadávania pracovných miest</p>
+                <ul>
+                  <li>Logistika</li>
+                  <li>Priemysel</li>
+                  <li>Stavebníctvo</li>
+                  <li>Administratíva</li>
+                </ul>
+              </Panel>
+
               <Divider height="40px" />
               <div className="title_wrapper">
                 <p className="info_text">
