@@ -3,7 +3,7 @@ import styled from "styled-components"
 import slide_1 from "../assets/slide_3.jpg"
 import ButtonBig from "./button_big"
 
-const SliderWrapper = styled.div `
+const SliderWrapper = styled.div`
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -110,13 +110,41 @@ const SliderWrapper = styled.div `
       position: relative;
     }
 `
-const Slide = styled.div `
+const Slide = styled.div`
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
-  background: -moz-linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
-  background: -webkit-linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
-  background: linear-gradient(180deg,rgba(0,17,39,0.44),rgba(0,17,39,0.44) 1%,rgba(0,17,39,0.6) 42%,rgba(0,17,39,1) 81%,rgba(0,17,39,1) 83%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 17, 39, 0.44),
+    rgba(0, 17, 39, 0.44) 1%,
+    rgba(0, 17, 39, 0.6) 42%,
+    rgba(0, 17, 39, 1) 81%,
+    rgba(0, 17, 39, 1) 83%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(0, 17, 39, 0.44),
+    rgba(0, 17, 39, 0.44) 1%,
+    rgba(0, 17, 39, 0.6) 42%,
+    rgba(0, 17, 39, 1) 81%,
+    rgba(0, 17, 39, 1) 83%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(0, 17, 39, 0.44),
+    rgba(0, 17, 39, 0.44) 1%,
+    rgba(0, 17, 39, 0.6) 42%,
+    rgba(0, 17, 39, 1) 81%,
+    rgba(0, 17, 39, 1) 83%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 17, 39, 0.44),
+    rgba(0, 17, 39, 0.44) 1%,
+    rgba(0, 17, 39, 0.6) 42%,
+    rgba(0, 17, 39, 1) 81%,
+    rgba(0, 17, 39, 1) 83%
+  );
   @media (max-width: 980px) {
     position: absolute;
     left: 0;
@@ -139,30 +167,40 @@ const SlideContent = styled.div`
     width: 340px;
   }
 `
-class Slider extends React.Component  {
+class Slider extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { showMenu: true };
+    super(props)
+    this.state = { showMenu: true }
   }
-  
 
   render() {
     return (
       <SliderWrapper>
-        <Slide/>
+        <Slide />
         <h2>Partner pre servis vašej firmy, na ktorého sa môžete spoľahnúť</h2>
 
         <ul>
-          <li><a href="/personalna_agentura">personálna agentúra</a></li>
-          <li><a href="/dopravca">dopravca do 3.5t</a></li>
-          <li><a href="/upratovaci_servis">upratovací servis</a></li>
-          <li><a href="/organizovanie_eventov">organizovanie eventov</a></li>
+          <li>
+            <a href="/personalna_agentura">personálna agentúra</a>
+          </li>
+          <li>
+            <a href="/dopravca">dopravca cestnej nákladnej prepravy</a>
+          </li>
+          <li>
+            <a href="/upratovaci_servis">upratovací servis</a>
+          </li>
+          <li>
+            <a href="/organizovanie_eventov">organizovanie eventov</a>
+          </li>
         </ul>
         {/*<p className="flavour_text">
         Sme agentúra v oblasti poskytovania komplexného servisu personalistiky, logistiky, cateringu a teambuildingu
-        </p>*/}    
+        </p>*/}
         <SlideContent>
-          <ButtonBig buttonText="Nezáväzná cenová ponuka" buttonLink="https://www.agenturapas.sk/kontakt" />
+          <ButtonBig
+            buttonText="Nezáväzná cenová ponuka"
+            buttonLink="https://www.agenturapas.sk/kontakt"
+          />
           {/* <ButtonBig buttonText="ponuka práce" buttonLink="/ponuka_prace" /> */}
         </SlideContent>
       </SliderWrapper>

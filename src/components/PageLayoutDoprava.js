@@ -130,14 +130,16 @@ class PageLayoutDoprava extends React.Component {
             <Grid item xs={8} className="text_wrapper responsive_grid_2">
               <div className="title_wrapper">
                 <h1 className="service_name">dopravca</h1>
-                <h1 className="services">Váš partner v doprave do 3.5t</h1>
+                <h1 className="services">
+                  Váš partner v nákladnej cestnej doprave
+                </h1>
                 <ul>
                   <li>Dopravné služby pre kuriérske spoločnosti</li>
                   <li>Starostlivosť o pridelený rajón</li>
                   <li>Doprava tovaru na základe pridelených objednávok</li>
                   <li>Vyzdvihnutie tovaru z Košického a Prešovského kraja</li>
-                  <li>Doprava v rámci SR a EÚ</li>
-                  <li>Vozový park nových úžitkových vozidiel</li>
+                  <li>Doprava v rámci SR</li>
+                  <li>Vozový park</li>
                   <li>Dispečing - koordinácia dodania tovaru</li>
                 </ul>
               </div>
@@ -145,6 +147,10 @@ class PageLayoutDoprava extends React.Component {
               <ButtonWrapper
                 buttonText="Nezáväzná cenová ponuka"
                 buttonLink="mail"
+              />
+              <ButtonWrapper
+                buttonText="Prepravný poriadok"
+                buttonLink="/Prepravny_poriadok-PaS_Services_sro.docx"
               />
             </Grid>
           </Grid>

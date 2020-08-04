@@ -32,7 +32,7 @@ class PageAbout extends React.Component {
         <TitleImage
           width="420px"
           componentClass="logistic"
-          title="Zabezpečenie dopravy v rámci SR a EÚ"
+          title="Zabezpečenie nákladnej prepravy v rámci SR (pozor iba SR)"
         />
         <Divider height="100px" />
         <PageLayoutDoprava />
