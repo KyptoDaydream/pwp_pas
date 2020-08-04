@@ -145,12 +145,13 @@ class PageLayoutDoprava extends React.Component {
               </div>
               <Divider height="70px" />
               <ButtonWrapper
-                buttonText="Nezáväzná cenová ponuka"
-                buttonLink="mail"
-              />
-              <ButtonWrapper
                 buttonText="Prepravný poriadok"
                 buttonLink="/Prepravny_poriadok-PaS_Services_sro.docx"
+                smallPadding={true}
+              />
+              <ButtonWrapper
+                buttonText="Nezáväzná cenová ponuka"
+                buttonLink="mail"
               />
             </Grid>
           </Grid>
