@@ -2,9 +2,9 @@
 layout: blog
 type: pozicie
 path: /kurier/
-position: 'Kuriér v medzinárodnej prepravnej spoločnosti – TPP '
-city: '0'
-space: '1'
+position: "Kuriér v medzinárodnej prepravnej spoločnosti – TPP "
+city: "0"
+space: "2"
 mzda: 700€/mesiac fix
 start: 02.06.2019
 ---
